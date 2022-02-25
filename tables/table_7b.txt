@@ -1,0 +1,50 @@
+	(1)	(2)	(3)
+VARIABLES	zGledAnywar11	zGledAnywarP11	prioanywarP11
+			
+successl1anywar	-0.255*	-0.103	
+	(0.144)	(0.257)	
+successl1nowar	-0.0236	0.0197	0.0700
+	(0.0680)	(0.0855)	(0.0567)
+l1anywar	-0.504***	-0.462***	
+	(0.0714)	(0.0855)	
+o.l1anywar		-	
+			
+weapondum2	-0.215**	-0.0321	0.0715
+	(0.0827)	(0.0930)	(0.105)
+weapondum3	0.0221	-0.0283	0.103*
+	(0.0569)	(0.0691)	(0.0610)
+o.weapondum4	-	-	-
+			
+weapondum5	0.162	0.163	-0.00524
+	(0.126)	(0.166)	(0.166)
+weapondum6	-0.138	-0.116**	-0.0905*
+	(0.117)	(0.0531)	(0.0507)
+numserdum2	-0.0890	-0.0981*	-0.0886
+	(0.0843)	(0.0528)	(0.0796)
+numserdum3	0.0881	-0.106*	-0.0555
+	(0.179)	(0.0591)	(0.0447)
+o.numserdum4		-	-
+			
+numserdum4	-0.00276		
+	(0.109)		
+successl1fullwar			-0.110
+			(0.294)
+successl1somewar			0.334**
+			(0.163)
+l1fullwar			-0.313***
+			(0.0949)
+l1somewar			-0.259***
+			(0.0877)
+Constant	0.164***	0.106*	0.0555
+	(0.0482)	(0.0591)	(0.0447)
+			
+Observations	223	116	116
+R-squared	0.327	0.260	0.243
+Intense war-Parm p	0.0794	0.690	0.709
+Intense war-Nonparm p	0.133	1	0.688
+No war-Parm p	0.729	0.819	0.222
+No war-Nonparm p	0.620	0.709	0.208
+Moderate war-Parm p			0.0452
+Moderate war-Nonparm p			0.126
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			
