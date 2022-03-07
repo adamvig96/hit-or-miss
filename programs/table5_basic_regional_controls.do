@@ -1,5 +1,4 @@
-cd "C:\Users\Vegh_Marton\Desktop\replication polecon"
-use data/country_year_data, clear
+use "data/country_year_data.dta", clear
 
 tsset
 g anywarl1l3 = l.zGledAnywar - l3.zGledAnywar

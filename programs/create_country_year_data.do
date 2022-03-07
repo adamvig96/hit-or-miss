@@ -2,6 +2,14 @@
 * Build variables
 ****************************
 
+version 9.2
+clear
+set mem 300m
+set more off
+capture  log close
+log using MakeTablesAndFigures, t replace
+
+
 *** Get data
 use "data/mergeddata.dta", clear
 keep if year >= 1875

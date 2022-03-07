@@ -1,5 +1,5 @@
-cd "C:\Users\Vegh_Marton\Desktop\replication polecon"
-use data/country_year_data, clear
+
+use "data/country_year_data.dta", clear
 local fixedeffectvars = "weapondum* numserdum* " 		
 
 
