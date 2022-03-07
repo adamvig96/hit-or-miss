@@ -1,0 +1,39 @@
+Table 5b		
+	(1)	(2)
+VARIABLES	npolity2dummy11	perexitregularNC201
+		
+successlautoc	0.131**	0.191**
+	(0.0550)	(0.0853)
+successldemoc	-0.0117	0.0344
+	(0.0826)	(0.0429)
+lautoc	0.115**	-0.294***
+	(0.0473)	(0.0773)
+weapondum2	-0.0347	0.0583
+	(0.0936)	(0.100)
+weapondum3	-0.0164	-0.0576
+	(0.0312)	(0.0766)
+o.weapondum4	-	-
+		
+weapondum5	0.0434	-0.0251
+	(0.0694)	(0.181)
+weapondum6	0.0392	0.204**
+	(0.0769)	(0.0785)
+numserdum2	-0.0353	0.0787
+	(0.102)	(0.0929)
+numserdum3	-0.0328	
+	(0.0250)	
+numserdum4	0.0548	-0.0636
+	(0.104)	(0.0775)
+o.numserdum3		-
+		
+Constant	-0.0823*	0.825***
+	(0.0460)	(0.0571)
+		
+Observations	221	133
+R-squared	0.112	0.210
+Autoc-Parm p	0.0193	0.0296
+Autoc-Nonparm p	0.00852	0.0461
+Democ-Parm p	0.888	0.426
+Democ-Nonparm p	1	0.956
+Robust standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		
