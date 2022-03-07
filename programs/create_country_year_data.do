@@ -7,7 +7,6 @@ clear
 set mem 300m
 set more off
 capture  log close
-log using MakeTablesAndFigures, t replace
 
 
 *** Get data
