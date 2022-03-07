@@ -107,7 +107,7 @@ program define maketablerank
 		
 	}
 	
-	outsheet using `using'.out, replace
+	outsheet using `using'.tex, replace
 	restore
 
 end

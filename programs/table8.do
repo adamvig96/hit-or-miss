@@ -89,148 +89,148 @@ replace outinfo2 = r(N) in `numvar'
 tab absnpolity2dummy11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Baseline) replace 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) replace 	pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if woundedbystander == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if wounded == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if attempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
 
 tab absnpolity2dummy11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
 
 
 * Column 2: npolity2dummy11 
 tab npolity2dummy11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if woundedbystander == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if wounded == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if attempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
 
 * Column 3: npolity2dummy11  for autocrats
 g npolity2dummy11A = npolity2dummy11  
 tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1   , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if woundedbystander == 1 & lautoc == 1 , exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if wounded == 1 & lautoc == 1 , exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if attempt == 1 & lautoc == 1 , exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if attempt == 1 , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & solo == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1  & firstattempt == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
 
 tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1, exact chi2
 local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
 
 
 * Column 4: perexitregularNC201
 ranksumben perexitregularNC201 if seriousattempt == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if woundedbystander == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if wounded == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if attempt == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if seriousattempt == 1 & solo == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if seriousattempt == 1 & firstattempt == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201  if seriousattempt == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
 
 * Column 5: perexitregularNC201 autocrats
 g perexitregularNC201A = perexitregularNC201 
@@ -238,34 +238,34 @@ g perexitregularNC201A = perexitregularNC201
 ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1   , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if woundedbystander == 1 & lautoc == 1 , by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if wounded == 1 & lautoc == 1 , by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if attempt == 1 & lautoc == 1 , by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if attempt == 1 , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & solo == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1  & firstattempt == 1, cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
 
 ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
 local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using tables/table_8, rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')

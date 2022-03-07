@@ -160,21 +160,21 @@ testparm success
 local pvalparm = r(p)
 tab zGledAnywar11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
-outreg2 using tables/table_7a, coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') replace title("tables/table 7a")
+outreg2 using "tables/table_7a.tex", coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') replace title("tables/table 7a")
 
 reg zGledAnywarP11 success  `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
 testparm success
 local pvalparm = r(p)
 tab zGledAnywarP11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
-outreg2 using tables/table_7a, coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') append 
+outreg2 using "tables/table_7a.tex", coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') append 
 
 reg prioanywarP11 success  `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
 testparm success
 local pvalparm = r(p)
 tab prioanywarP11 success if seriousattempt == 1, exact chi2
 local pvalnonparm = r(p_exact)
-outreg2 using tables/table_7a, coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') append 
+outreg2 using "tables/table_7a.tex", coefastr se adds("Parm p",`pvalparm',"Nonparm p",`pvalnonparm') append 
 
 * Panel B
 g l1anywar = l1.zGledAnywar
@@ -192,7 +192,7 @@ tab zGledAnywar11  success if l1anywar == 1 & seriousattempt == 1, exact chi2
 local pvalnonparmA = r(p_exact)
 tab zGledAnywar11  success if l1anywar == 0 & seriousattempt == 1, exact chi2
 local pvalnonparmN = r(p_exact)
-outreg2 using tables/table_7b, coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') replace
+outreg2 using "tables/table_7b.tex", coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') replace
 
 
 reg zGledAnywarP11 successl1anywar successl1nowar  l1anywar l1anywar  `fixedeffectvars' if seriousattempt == 1 , cluster(cowcode)
@@ -204,7 +204,7 @@ tab zGledAnywarP11  success if l1anywar == 1 & seriousattempt == 1, exact chi2
 local pvalnonparmA = r(p_exact)
 tab zGledAnywarP11  success if l1anywar == 0 & seriousattempt == 1, exact chi2
 local pvalnonparmN = r(p_exact)
-outreg2 using tables/table_7b, coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') append
+outreg2 using "tables/table_7b.tex", coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') append
 
 
 drop successl1anywar successl1nowar l1anywar l1nowar
@@ -232,5 +232,5 @@ tab prioanywarP11 success if l1somewar == 1 & seriousattempt == 1, exact chi2
 local pvalnonparmS = r(p_exact)
 tab prioanywarP11 success if l1nowar == 1 & seriousattempt == 1, exact chi2
 local pvalnonparmN = r(p_exact)
-outreg2 using tables/table_7b, coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"Moderate war-Parm p",`pvalparmS',"Moderate war-Nonparm p",`pvalnonparmS',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') append 
+outreg2 using "tables/table_7b.tex", coefastr se adds("Intense war-Parm p",`pvalparmA',"Intense war-Nonparm p",`pvalnonparmA',"Moderate war-Parm p",`pvalparmS',"Moderate war-Nonparm p",`pvalnonparmS',"No war-Parm p",`pvalparmN',"No war-Nonparm p",`pvalnonparmN') append 
 

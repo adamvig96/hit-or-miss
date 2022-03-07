@@ -3,7 +3,7 @@
 *** Table 4: Exogeniety tests 
 **************************************
 
-use data/country_year_data, clear
+use "data/country_year_data.dta", clear
 
 tsset
 g anywarl1l3 = l.zGledAnywar - l3.zGledAnywar
@@ -83,30 +83,30 @@ qui count if success == 0 & seriousattempt == 1
 replace outinfo2 = r(N) in `numvar'
 
 
-outsheet varname outinfo* using tables/table_4a.txt in 1/`numvar', replace
+outsheet varname outinfo* using "tables/table_4a.tex" in 1/`numvar', replace
 
 * Parallel to below
 dprobit success lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock if seriousattempt == 1, cluster(cowcode)
 testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
 local pval = r(p)
 testparm *
-outreg2 using tables/table_4b, coefastr se replace title("table 3 regs") bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+outreg2 using "tables/table_4b.tex", coefastr se replace title("table 3 regs") bd(3) adds("P-val",`pval',"P-val of regression",r(p))
 
 dprobit success lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock weapondum* if seriousattempt == 1, cluster(cowcode)
 testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
 local pval = r(p)
 testparm *
-outreg2 using tables/table_4b, coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+outreg2 using "tables/table_4b.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
 
 
 dprobit success lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur   if seriousattempt == 1, cluster(cowcode)
 testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
 local pval = r(p)
 testparm *
-outreg2 using tables/table_4b, coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+outreg2 using "tables/table_4b.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
 
 dprobit success lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur weapondum*    if seriousattempt == 1, cluster(cowcode)
 testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
 local pval = r(p)
 testparm *
-outreg2 using tables/table_4b, coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+outreg2 using "tables/table_4b.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
