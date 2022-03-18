@@ -85,10 +85,10 @@ replace outinfo2 = r(N) in `numvar'
 
 g lnenergy = ln(energy)
 
-local basiccontrols = "lnpop llnpop age lage lnenergy_pc llnenergy_pc lclock"
 local regionalcontrols = "regdum*"
-local basiccontrols = "lnpop llnpop age lage lnenergy_pc llnenergy_pc lclock"
-
+local controlvars = "lnpop llnpop age lage lnenergy_pc llnenergy_pc"
+local fixedeffectvars = "weapondum* numserdum* " 
+	
 reg absnpolity2dummy11  success `controlvars' `regionalcontrols' `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
 testparm success
 local pvalparm = r(p)

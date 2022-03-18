@@ -2,30 +2,60 @@ Table 5b
 	(1)	(2)
 VARIABLES	npolity2dummy11	perexitregularNC201
 		
-successlautoc	0.128**	0.269***
-	(0.0527)	(0.0817)
-successldemoc	0.00588	0.0254
-	(0.0671)	(0.0470)
-lautoc	0.181***	-0.204**
-	(0.0651)	(0.0777)
-regdumAfrica	-0.171*	-0.372***
-	(0.0913)	(0.125)
-regdumAsia	-0.0392	-0.127
-	(0.0672)	(0.103)
-regdumMENA	-0.129**	-0.265**
-	(0.0549)	(0.106)
-regdumLatAm	-0.0765	-0.0992
-	(0.0901)	(0.0788)
-regdumEEur	-0.128**	-0.355***
-	(0.0554)	(0.103)
-Constant	-0.0541	0.908***
-	(0.0423)	(0.0450)
+successlautoc	0.184**	0.183*
+	(0.0796)	(0.102)
+successldemoc	-0.0260	0.0666
+	(0.0721)	(0.0605)
+lautoc	0.180***	-0.141
+	(0.0674)	(0.104)
+lnpop	1.666**	2.007
+	(0.789)	(2.229)
+llnpop	-1.687**	-1.999
+	(0.790)	(2.233)
+age	-0.00359	0.000958
+	(0.00470)	(0.00397)
+lage	0.00648	-0.00138
+	(0.00480)	(0.00411)
+lnenergy_pc	-0.165**	-0.116
+	(0.0663)	(0.0995)
+llnenergy_pc	0.154**	0.171
+	(0.0633)	(0.104)
+regdumAfrica	-0.250**	-0.250*
+	(0.115)	(0.133)
+regdumAsia	-0.0456	-0.0122
+	(0.0837)	(0.102)
+regdumMENA	-0.162**	-0.196
+	(0.0722)	(0.129)
+regdumLatAm	-0.156	0.0375
+	(0.109)	(0.111)
+regdumEEur	-0.135**	-0.396***
+	(0.0660)	(0.0828)
+weapondum2	0.00771	0.0880
+	(0.0632)	(0.0715)
+weapondum3	-0.0120	0.0136
+	(0.0361)	(0.0765)
+o.weapondum4	-	-
 		
-Observations	242	145
-R-squared	0.134	0.297
-Autoc-Parm p	0.0176	0.00172
+weapondum5	0.0353	-0.00851
+	(0.0722)	(0.165)
+weapondum6	-0.0391	0.177*
+	(0.0689)	(0.100)
+numserdum2	-0.0679	-0.0165
+	(0.120)	(0.100)
+numserdum3	0.424**	
+	(0.183)	
+o.numserdum4	-	-
+		
+o.numserdum3		-
+		
+Constant	-0.0138	0.789***
+	(0.171)	(0.277)
+		
+Observations	207	120
+R-squared	0.216	0.464
+Autoc-Parm p	0.0238	0.0788
 Autoc-Nonparm p	0.0103	0.0185
-Democ-Parm p	0.930	0.591
+Democ-Parm p	0.720	0.277
 Democ-Nonparm p	1	0.669
 Robust standard errors in parentheses		
 *** p<0.01, ** p<0.05, * p<0.1		

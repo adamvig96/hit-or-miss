@@ -110,3 +110,31 @@ testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_
 local pval = r(p)
 testparm *
 outreg2 using "tables/table_4b.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+
+
+
+* Linear POLITY" variable
+dprobit success polity2 pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock if seriousattempt == 1, cluster(cowcode)
+testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
+local pval = r(p)
+testparm *
+outreg2 using "tables/table_4_polity.tex", coefastr se replace title("table 3 regs") bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+
+dprobit success polity2 pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock weapondum* if seriousattempt == 1, cluster(cowcode)
+testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
+local pval = r(p)
+testparm *
+outreg2 using "tables/table_4_polity.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+
+
+dprobit success polity2 pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur   if seriousattempt == 1, cluster(cowcode)
+testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
+local pval = r(p)
+testparm *
+outreg2 using "tables/table_4_polity.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))
+
+dprobit success polity2 pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur weapondum*    if seriousattempt == 1, cluster(cowcode)
+testparm lpol2dum pol2duml1l3 numexitanylast5 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock 
+local pval = r(p)
+testparm *
+outreg2 using "tables/table_4_polity.tex", coefastr se append bd(3) adds("P-val",`pval',"P-val of regression",r(p))

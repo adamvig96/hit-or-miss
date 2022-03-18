@@ -11408,5 +11408,1874 @@ File not found
 . 
 end of do-file
 
+. do "programs/event_study.do"
+
 . 
+. *******************************************************************
+. * Subject: Empirical Political Economy
+. * Authors: Philipp, Niccolo, Ramzi, Marton & Adam
+. * Project: "Hit or Miss"
+. *******************************************************************
+. 
+. *******************
+. * Preamble
+. *******************
+. 
+. *load necessary packages
+. 
+. *ssc install estudy, replace
+. *ssc install eventstudy, replace
+. *ssc install eventstudy2, replace
+. *help estudy
+. 
+. **************************************
+. *** Table 6: Tenure of Leader and Duration Effects
+. **************************************
+. 
+. * Column 1: All serious attempts
+. use "data/country_year_data.dta", clear
+
+. 
+. 
+. tab npolity2dummy11 success if seriousattempt == 1, exact chi2
+
+Enumerating sample-space combinations:
+stage 3:  enumerations = 1
+stage 2:  enumerations = 6
+stage 1:  enumerations = 0
+
+npolity2du |        Success
+     mmy11 |         0          1 |     Total
+-----------+----------------------+----------
+        -1 |         5          2 |         7 
+         0 |       156         49 |       205 
+         1 |         3          6 |         9 
+-----------+----------------------+----------
+     Total |       164         57 |       221 
+
+          Pearson chi2(2) =   8.2670   Pr = 0.016
+           Fisher's exact =                 0.016
+
+. local pvalnonparm = r(p_exact)
+
+. reg npolity2dummy11 success weapondum2 weapondum3 weapondum4 weapondu
+> m5 weapondum6 numserdum2 numserdum3 numserdum4 if seriousattempt == 1
+>   , cluster(cowcode)
+note: weapondum4 omitted because of collinearity
+
+Linear regression                               Number of obs     =    
+>     221
+                                                F(6, 86)          =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.0320
+                                                Root MSE          =    
+>  .27014
+
+                               (Std. Err. adjusted for 87 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+     success |   .0789814   .0507891     1.56   0.124    -.0219839    .
+> 1799467
+  weapondum2 |  -.0939155   .0928501    -1.01   0.315    -.2784954    .
+> 0906644
+  weapondum3 |  -.0124761   .0294337    -0.42   0.673    -.0709884    .
+> 0460363
+  weapondum4 |          0  (omitted)
+  weapondum5 |    .065378   .0752636     0.87   0.387    -.0842412    .
+> 2149971
+  weapondum6 |   .0634951   .0774736     0.82   0.415    -.0905174    .
+> 2175076
+  numserdum2 |  -.0052785   .1046825    -0.05   0.960    -.2133805    .
+> 2028235
+  numserdum3 |    .010874   .0259007     0.42   0.676    -.0406149    .
+> 0623629
+  numserdum4 |  -.1316025    .089035    -1.48   0.143    -.3085983    .
+> 0453933
+       _cons |   -.010874   .0259007    -0.42   0.676    -.0623629    .
+> 0406149
+-----------------------------------------------------------------------
+> -------
+
+. *maketablerank using table_6, rhs(success) varcol(All) replace  pval 
+> noastr rankpval(`pvalnonparm')
+. 
+. 
+. *********************************************************************
+> ***********
+. *********************************************************************
+> ***********
+. 
+. 
+. ***                     --- IDEAS ARIEDA ---
+. 
+. ***
+. *** eventstudy idea code
+. ***
+. 
+. *preserve original data
+. *preserve
+. 
+. * prepare data 
+. *remove the duplicates around the ten year window for eventstudy
+. replace success=0 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(1 real change made)
+
+. replace success=0 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-6]==1 & cowcode[_n-6]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-7]==1 & cowcode[_n-7]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-8]==1 & cowcode[_n-8]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-9]==1 & cowcode[_n-9]==cowcode
+(1 real change made)
+
+. replace success=0 if success[_n-10]==1 & cowcode[_n-10]==cowcode
+(1 real change made)
+
+. 
+. *condition on seriousattempt
+. gen panel_attempt=1 if seriousattempt[_n+10]==1 & cowcode[_n+10]==cow
+> code
+(12,144 missing values generated)
+
+. replace panel_attempt=1 if seriousattempt[_n+9]==1 & cowcode[_n+9]==c
+> owcode
+(184 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+8]==1 & cowcode[_n+8]==c
+> owcode
+(180 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+7]==1 & cowcode[_n+7]==c
+> owcode
+(177 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+6]==1 & cowcode[_n+6]==c
+> owcode
+(175 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+5]==1 & cowcode[_n+5]==c
+> owcode
+(169 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+4]==1 & cowcode[_n+4]==c
+> owcode
+(165 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+3]==1 & cowcode[_n+3]==c
+> owcode
+(158 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+2]==1 & cowcode[_n+2]==c
+> owcode
+(157 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+1]==1 & cowcode[_n+1]==c
+> owcode
+(153 real changes made)
+
+. replace panel_attempt=1 if seriousattempt==1 
+(148 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-1]==1 & cowcode[_n-1]==c
+> owcode
+(143 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-2]==1 & cowcode[_n-2]==c
+> owcode
+(137 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-3]==1 & cowcode[_n-3]==c
+> owcode
+(130 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-4]==1 & cowcode[_n-4]==c
+> owcode
+(124 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-5]==1 & cowcode[_n-5]==c
+> owcode
+(122 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-6]==1 & cowcode[_n-6]==c
+> owcode
+(118 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-7]==1 & cowcode[_n-7]==c
+> owcode
+(113 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-8]==1 & cowcode[_n-8]==c
+> owcode
+(110 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-9]==1 & cowcode[_n-9]==c
+> owcode
+(106 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-10]==1 & cowcode[_n-10]=
+> =cowcode
+(103 real changes made)
+
+. 
+. ***
+. * condition on attempts
+. ***
+. 
+. keep if panel_attempt==1 
+(9,272 observations deleted)
+
+. 
+. 
+. ***
+. 
+. *for later diagnostics
+. *create the success indicator variable
+. gen panel_success=-5 if success[_n+5]==1 & cowcode[_n+5]==cowcode
+(3,019 missing values generated)
+
+. replace panel_success=-4 if success[_n+4]==1 & cowcode[_n+4]==cowcode
+(52 real changes made)
+
+. replace panel_success=-3 if success[_n+3]==1 & cowcode[_n+3]==cowcode
+(54 real changes made)
+
+. replace panel_success=-2 if success[_n+2]==1 & cowcode[_n+2]==cowcode
+(55 real changes made)
+
+. replace panel_success=-1 if success[_n+1]==1 & cowcode[_n+1]==cowcode
+(55 real changes made)
+
+. replace panel_success=0 if success==1 
+(56 real changes made)
+
+. replace panel_success=1 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(56 real changes made)
+
+. replace panel_success=2 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(56 real changes made)
+
+. replace panel_success=3 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(56 real changes made)
+
+. replace panel_success=4 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(54 real changes made)
+
+. replace panel_success=5 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(54 real changes made)
+
+. 
+. *shift to pos. values
+. replace panel_success=panel_success+6
+(598 real changes made)
+
+. replace panel_success=0 if panel_success==.
+(2,471 real changes made)
+
+. 
+. 
+. *create the success dummies like discussed
+. gen success_m5=0
+
+. replace success_m5=1 if success[_n+5]==1 & cowcode[_n+5]==cowcode
+(50 real changes made)
+
+. gen success_m4=0
+
+. replace success_m4=1 if success[_n+4]==1 & cowcode[_n+4]==cowcode
+(52 real changes made)
+
+. gen success_m3=0
+
+. replace success_m3=1 if success[_n+3]==1 & cowcode[_n+3]==cowcode
+(54 real changes made)
+
+. gen success_m2=0
+
+. replace success_m2=1 if success[_n+2]==1 & cowcode[_n+2]==cowcode
+(55 real changes made)
+
+. gen success_m1=0
+
+. replace success_m1=1 if success[_n+1]==1 & cowcode[_n+1]==cowcode
+(55 real changes made)
+
+. 
+. gen success_p0=0
+
+. replace success_p0=1 if success==1 
+(56 real changes made)
+
+. 
+. gen success_p1=0
+
+. replace success_p1=1 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(56 real changes made)
+
+. gen success_p2=0
+
+. replace success_p2=1 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(56 real changes made)
+
+. gen success_p3=0
+
+. replace success_p3=1 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(56 real changes made)
+
+. gen success_p4=0
+
+. replace success_p4=1 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(54 real changes made)
+
+. gen success_p5=0
+
+. replace success_p5=1 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(54 real changes made)
+
+. 
+. 
+. ***
+. *NEW CODE WITH EVENTSTUDY INTERACT PACKAGE
+. 
+. *INSTALL PACKAGES
+. *ssc install eventstudyinteract, all replace
+. *ssc install avar
+. *ssc install reghdfe
+. *ssc install ftools
+. 
+. *gen our outcome of interest
+. gen difpol2= polity2 - l.polity2 if cowcode[_n-1]==cowcode
+(213 missing values generated)
+
+. gen chgpol2= difpol2
+(213 missing values generated)
+
+. replace chgpol2= 0 if difpol2 ==.
+(213 real changes made)
+
+. replace chgpol2= 1 if chgpol2 >=1
+(120 real changes made)
+
+. replace chgpol2= -1 if chgpol2 <=-1 
+(105 real changes made)
+
+. 
+. 
+. *code the cohort categorical variable based on when the individual fi
+> rst joined the union, which will be
+. *inputted in cohort(varname).
+. gen success_year = year if success == 1
+(3,013 missing values generated)
+
+. bysort cowcode: egen first_success = min(success_year)
+(1173 missing values generated)
+
+. *drop success_year
+.  
+. *code the relative time categorical variable.
+. gen relative_year = year - first_success
+(1,173 missing values generated)
+
+. 
+. *for the first example, we take the control cohort to be individuals 
+> that never unionized.
+. gen never_success = (first_success == .)
+
+. 
+. *we will consider the dynamic effect of union status on income.  We f
+> irst generate these relative time
+. *indicators, and leave out the distant leads due to few observations.
+>   Implicitly this assumes that effects
+. *outside the lead windows are zero.
+.  
+.  forvalues k = 10(-1)2 {
+  2.  gen g_`k' = relative_year == -`k'
+  3.  }
+
+.  forvalues k = 0/10 {
+  2.  gen g`k' = relative_year == `k'
+  3.  }
+
+.         
+. *we use the IW estimator to estimate the dynamic effect on log wage a
+> ssociated with each relative time.
+. *with many leads and lags, we need a large matrix size to hold interm
+> ediate estimates.
+. 
+. 
+. *********************************************************************
+> ***********
+. 
+. ***
+. * Panel A with Event Study
+. *
+. * Directional change in POLITY2 dummy
+. ***
+. 
+. * use 5 leads and 5 lags as before (now with covariates)
+. 
+. *** All serious attempts
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   2,856
+Absorbing 2 HDFE groups                         F( 343,     88)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.1774
+                                                Adj R-squared     =    
+> -0.0233
+                                                Root MSE          =    
+>  1.9317
+                               (Std. Err. adjusted for 89 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.2398417    .299149    -0.80   0.425    -.8343375    .
+> 3546541
+         g_4 |  -.0643995   .1053823    -0.61   0.543    -.2738246    .
+> 1450256
+         g_3 |   .1973479   .2710553     0.73   0.469    -.3413176    .
+> 7360133
+         g_2 |  -.0847094   .2499783    -0.34   0.736    -.5814887    .
+> 4120699
+          g0 |   .0527998   .5820261     0.09   0.928    -1.103855    1
+> .209454
+          g1 |  -.1392969    .311557    -0.45   0.656    -.7584511    .
+> 4798572
+          g2 |  -.5367977   .3912535    -1.37   0.174    -1.314332    .
+> 2407363
+          g3 |   .2194486   .1902191     1.15   0.252    -.1585719    .
+> 5974691
+          g4 |   -.152681   .4186157    -0.36   0.716    -.9845917    .
+> 6792298
+          g5 |   .1930181   .1796034     1.07   0.285     -.163906    .
+> 5499422
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982
+ r1   .29914903   .01774129   .04980729           .           .
+ r2   .01774129   .10538225   .02018336           .   .04302679
+ r3   .04980729   .02018336    .2710553    .1070072           .
+ r4           .           .    .1070072   .24997829           .
+ r5           .   .04302679           .           .   .58202613
+ r6           .           .           .           .   .04558852
+ r7           .           .   .03353732   .03762982   .10950031
+ r8           .   .00186473           .           .   .05347398
+ r9   .13110142           .   .05375711   .11260503           .
+r10           .   .02864957   .10316653   .10405715    .0706929
+
+             g1          g2          g3          g4          g5
+ r1  -.13929692  -.53679773   .21944861  -.15268097   .19301806
+ r1           .           .           .   .13110142           .
+ r2           .           .   .00186473           .   .02864957
+ r3           .   .03353732           .   .05375711   .10316653
+ r4           .   .03762982           .   .11260503   .10405715
+ r5   .04558852   .10950031   .05347398           .    .0706929
+ r6   .31155703           .    .0668313           .           .
+ r7           .   .39125348   .02876789           .   .07566701
+ r8    .0668313   .02876789    .1902191           .    .0907165
+ r9           .           .           .   .41861569    .0318071
+r10           .   .07566701    .0907165    .0318071   .17960344
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *** Tenure <= 10
+. preserve
+
+. keep if durgroup == 1
+(649 observations deleted)
+
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=1,429)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   2,278
+Absorbing 2 HDFE groups                         F( 299,     88)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.1841
+                                                Adj R-squared     =    
+> -0.0550
+                                                Root MSE          =    
+>  1.9315
+                               (Std. Err. adjusted for 89 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |   .0777798   .1902388     0.41   0.684    -.3002798    .
+> 4558394
+         g_4 |  -.0574367   .1424591    -0.40   0.688    -.3405443    .
+> 2256709
+         g_3 |   .3785573   .3647567     1.04   0.302    -.3463201    1
+> .103435
+         g_2 |  -.1630848   .3009896    -0.54   0.589    -.7612383    .
+> 4350687
+          g0 |  -.4703495   .6538491    -0.72   0.474    -1.769737    .
+> 8290382
+          g1 |   .1847824   .1642679     1.12   0.264    -.1416656    .
+> 5112303
+          g2 |  -.5541202   .4132709    -1.34   0.183    -1.375409    .
+> 2671689
+          g3 |   .2720766   .2008598     1.35   0.179      -.12709    .
+> 6712432
+          g4 |   -.150864   .4339938    -0.35   0.729    -1.013335    .
+> 7116074
+          g5 |   .2976675   .1870368     1.59   0.115    -.0740287    .
+> 6693638
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1    .0777798  -.05743673   .37855729  -.16308481  -.47034951
+ r1   .19023878    .0399031           .           .           .
+ r2    .0399031   .14245913           .   .01066399           .
+ r3           .           .   .36475673   .04808679   .05969661
+ r4           .   .01066399   .04808679   .30098956   .08188922
+ r5           .           .   .05969661   .08188922   .65384913
+ r6   .09073568           .           .           .           .
+ r7           .           .   .05047289   .10341554   .15302558
+ r8           .   .05474119           .           .           .
+ r9           .           .   .06910169   .10034063   .13754702
+r10           .    .0281962           .   .05724833   .08323002
+
+             g1          g2          g3          g4          g5
+ r1   .18478238  -.55412018   .27207658  -.15086398   .29766753
+ r1   .09073568           .           .           .           .
+ r2           .           .   .05474119           .    .0281962
+ r3           .   .05047289           .   .06910169           .
+ r4           .   .10341554           .   .10034063   .05724833
+ r5           .   .15302558           .   .13754702   .08323002
+ r6    .1642679           .           .           .           .
+ r7           .   .41327091   .03377079       .0506   .08152099
+ r8           .   .03377079   .20085977           .   .09171695
+ r9           .       .0506           .   .43399377   .03179686
+r10           .   .08152099   .09171695   .03179686   .18703677
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Tenure > 10
+. preserve
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[
+> _n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[
+> _n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[
+> _n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[
+> _n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[
+> _n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[
+> _n+5]==2
+(78 real changes made)
+
+. 
+. keep if durgroup == 2
+(1,071 observations deleted)
+
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=1,147)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,859
+Absorbing 2 HDFE groups                         F( 211,     56)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.2043
+                                                Adj R-squared     =    
+> -0.0112
+                                                Root MSE          =    
+>  1.9762
+                               (Std. Err. adjusted for 57 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.4703509   .4446221    -1.06   0.295    -1.361036    .
+> 4203341
+         g_4 |  -.0652785   .1492864    -0.44   0.664     -.364335     
+> .233778
+         g_3 |   .0995572   .3610956     0.28   0.784    -.6238042    .
+> 8229185
+         g_2 |   -.170986   .4159032    -0.41   0.683     -1.00414    .
+> 6621682
+          g0 |   .5198841   .7951631     0.65   0.516    -1.073019    2
+> .112787
+          g1 |  -.4208885   .5606266    -0.75   0.456    -1.543958    .
+> 7021814
+          g2 |  -.7927282   .7031393    -1.13   0.264    -2.201286    .
+> 6158292
+          g3 |   .4603612   .3023356     1.52   0.133    -.1452897    1
+> .066012
+          g4 |   .0524936    .264102     0.20   0.843    -.4765662    .
+> 5815535
+          g5 |   .5005177   .2931607     1.71   0.093    -.0867536    1
+> .087789
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.47035094  -.06527852   .09955715  -.17098602   .51988412
+ r1   .44462207   .06754253   .08862708   .01385765           .
+ r2   .06754253   .14928635   .05802927           .   .06851893
+ r3   .08862708   .05802927   .36109558   .05011926   .11677065
+ r4   .01385765           .   .05011926   .41590322   .04909948
+ r5           .   .06851893   .11677065   .04909948   .79516312
+ r6           .           .           .           .           .
+ r7   .05186005           .           .           .           .
+ r8   .03785289   .08128094           .           .           .
+ r9   .05210499   .02892729   .03270512   .13123919           .
+r10   .01971674   .05995467   .04296365   .16679732   .07897083
+
+             g1          g2          g3          g4          g5
+ r1  -.42088853  -.79272818   .46036123   .05249365   .50051774
+ r1           .   .05186005   .03785289   .05210499   .01971674
+ r2           .           .   .08128094   .02892729   .05995467
+ r3           .           .           .   .03270512   .04296365
+ r4           .           .           .   .13123919   .16679732
+ r5           .           .           .           .   .07897083
+ r6   .56062656   .08546575   .08435391           .           .
+ r7   .08546575   .70313935   .03896552           .   .15158512
+ r8   .08435391   .03896552   .30233556   .01282361   .08786375
+ r9           .           .   .01282361   .26410198           .
+r10           .   .15158512   .08786375           .   .29316066
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. ***
+. * AUTOCRATS
+. ***
+. 
+. *** All serious attempts on autocrats
+. preserve 
+
+. keep if lautoc == 1
+(1,228 observations deleted)
+
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=1,071)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,770
+Absorbing 2 HDFE groups                         F( 248,     71)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.2862
+                                                Adj R-squared     =    
+>  0.0442
+                                                Root MSE          =    
+>  1.7193
+                               (Std. Err. adjusted for 72 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.5506372   .4311222    -1.28   0.206     -1.41027    .
+> 3089961
+         g_4 |   -.281569   .1655538    -1.70   0.093    -.6116739    .
+> 0485359
+         g_3 |    .160271   .3603142     0.44   0.658    -.5581751     
+> .878717
+         g_2 |  -.2275809   .2451081    -0.93   0.356    -.7163125    .
+> 2611508
+          g0 |   .1515992   .7045305     0.22   0.830    -1.253195    1
+> .556393
+          g1 |   .1042727   .2320882     0.45   0.655     -.358498    .
+> 5670434
+          g2 |  -.1899555   .2911246    -0.65   0.516    -.7704415    .
+> 3905305
+          g3 |   .2048976   .2392215     0.86   0.395    -.2720964    .
+> 6818917
+          g4 |   .2671735   .4837952     0.55   0.583    -.6974868    1
+> .231834
+          g5 |   .0715385    .201832     0.35   0.724     -.330903     
+>  .47398
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.55063718  -.28156901   .16027095  -.22758086   .15159919
+ r1   .43112223   .01224504   .03400579           .   .03959144
+ r2   .01224504    .1655538           .   .02007483    .0435733
+ r3   .03400579           .   .36031419   .07060368   .09624357
+ r4           .   .02007483   .07060368    .2451081   .04868018
+ r5   .03959144    .0435733   .09624357   .04868018   .70453051
+ r6   .06054375           .   .07810843           .   .02733475
+ r7   .04736022           .           .           .           .
+ r8           .   .02081565    .0597962    .0446848   .09648891
+ r9           .   .02658756   .05489487   .15327261           .
+r10           .    .0211613   .07611898   .06040289   .11793801
+
+             g1          g2          g3          g4          g5
+ r1   .10427269  -.18995551   .20489765   .26717353   .07153849
+ r1   .06054375   .04736022           .           .           .
+ r2           .           .   .02081565   .02658756    .0211613
+ r3   .07810843           .    .0597962   .05489487   .07611898
+ r4           .           .    .0446848   .15327261   .06040289
+ r5   .02733475           .   .09648891           .   .11793801
+ r6   .23208819   .07132279   .03990603   .05735326           .
+ r7   .07132279   .29112463    .0545281   .09717403           .
+ r8   .03990603    .0545281   .23922148           .   .07524012
+ r9   .05735326   .09717403           .   .48379524           .
+r10           .           .   .07524012           .   .20183196
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. *** Autocrat with tenure <= 10
+. preserve 
+
+. keep if lautoc == 1 & durgroup == 1
+(1,746 observations deleted)
+
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=787)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,272
+Absorbing 2 HDFE groups                         F( 193,     71)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.2942
+                                                Adj R-squared     =    
+> -0.0217
+                                                Root MSE          =    
+>  1.7288
+                               (Std. Err. adjusted for 72 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.1199588   .2490411    -0.48   0.632    -.6165327    .
+> 3766151
+         g_4 |  -.1955518   .2454663    -0.80   0.428    -.6849977    .
+> 2938942
+         g_3 |   .6377416   .5953899     1.07   0.288    -.5494322    1
+> .824915
+         g_2 |  -.0237373   .2285572    -0.10   0.918    -.4794673    .
+> 4319928
+          g0 |  -.4456233   .6718971    -0.66   0.509    -1.785348    .
+> 8941015
+          g1 |   .1373483   .2594536     0.53   0.598    -.3799875    .
+> 6546841
+          g2 |  -.2274171   .3420251    -0.66   0.508    -.9093957    .
+> 4545615
+          g3 |   .1707552   .2769186     0.62   0.539    -.3814047    .
+> 7229152
+          g4 |   .2043366   .4946806     0.41   0.681    -.7820285    1
+> .190702
+          g5 |   .2346319   .2103121     1.12   0.268    -.1847184    .
+> 6539823
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.11995876  -.19555178   .63774163  -.02373727  -.44562331
+ r1   .24904112   .01605451           .           .           .
+ r2   .01605451   .24546631   .04128212   .04668021           .
+ r3           .   .04128212   .59538992   .08284667   .13404398
+ r4           .   .04668021   .08284667   .22855718   .09165966
+ r5           .           .   .13404398   .09165966   .67189712
+ r6   .08969225           .   .09915288   .06364074   .13260453
+ r7   .04036407           .           .   .04097528           .
+ r8           .    .0754903           .   .06612577           .
+ r9           .   .06688378           .   .09462841           .
+r10           .           .    .0482637   .06555683           .
+
+             g1          g2          g3          g4          g5
+ r1   .13734826  -.22741711   .17075522   .20433655   .23463192
+ r1   .08969225   .04036407           .           .           .
+ r2           .           .    .0754903   .06688378           .
+ r3   .09915288           .           .           .    .0482637
+ r4   .06364074   .04097528   .06612577   .09462841   .06555683
+ r5   .13260453           .           .           .           .
+ r6   .25945361   .09010311   .03844601           .           .
+ r7   .09010311   .34202506    .1032839   .12183254   .02284566
+ r8   .03844601    .1032839   .27691858   .04135663    .1069249
+ r9           .   .12183254   .04135663   .49468057           .
+r10           .   .02284566    .1069249           .   .21031207
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrats with tenure > 10
+. preserve 
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[
+> _n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[
+> _n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[
+> _n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[
+> _n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[
+> _n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[
+> _n+5]==2
+(78 real changes made)
+
+. 
+. keep if lautoc == 1 & durgroup == 2
+(1,672 observations deleted)
+
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=808)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,345
+Absorbing 2 HDFE groups                         F( 177,     49)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.3165
+                                                Adj R-squared     =    
+>  0.0712
+                                                Root MSE          =    
+>  1.6509
+                               (Std. Err. adjusted for 50 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.6492557   .5911818    -1.10   0.277     -1.83728    .
+> 5387686
+         g_4 |  -.2894438   .2215801    -1.31   0.198    -.7347256    .
+> 1558381
+         g_3 |   -.017571   .4101371    -0.04   0.966    -.8417724    .
+> 8066304
+         g_2 |  -.3716299   .3811238    -0.98   0.334    -1.137527     
+> .394267
+          g0 |   .3466973   .9475405     0.37   0.716    -1.557457    2
+> .250851
+          g1 |    .031263   .3237418     0.10   0.923    -.6193206    .
+> 6818465
+          g2 |  -.1244901   .3408091    -0.37   0.716    -.8093717    .
+> 5603914
+          g3 |   .2969938   .3558638     0.83   0.408    -.4181414    1
+> .012129
+          g4 |   .0722038   .3652486     0.20   0.844    -.6617909    .
+> 8061984
+          g5 |   .1209392   .2455016     0.49   0.624    -.3724149    .
+> 6142932
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.64925571  -.28944378  -.01757098   -.3716299   .34669733
+ r1   .59118182   .04127847    .0941302           .           .
+ r2   .04127847   .22158009   .06580758   .07274102   .08545748
+ r3    .0941302   .06580758   .41013712   .05320444   .08972798
+ r4           .   .07274102   .05320444   .38112376   .06532811
+ r5           .   .08545748   .08972798   .06532811   .94754052
+ r6   .00686486   .02781085   .04762854           .   .05832621
+ r7    .0864001           .           .           .   .04249401
+ r8   .01953718   .03963103   .04587211   .04396608   .04931813
+ r9           .   .06445901   .04784562   .19835576   .08654151
+r10           .   .06689077   .03059187    .0747125   .07171754
+
+             g1          g2          g3          g4          g5
+ r1   .03126295  -.12449012    .2969938   .07220377   .12093917
+ r1   .00686486    .0864001   .01953718           .           .
+ r2   .02781085           .   .03963103   .06445901   .06689077
+ r3   .04762854           .   .04587211   .04784562   .03059187
+ r4           .           .   .04396608   .19835576    .0747125
+ r5   .05832621   .04249401   .04931813   .08654151   .07171754
+ r6    .3237418   .09799379   .10170919   .06607688   .07273929
+ r7   .09799379    .3408091    .0832524           .   .06228719
+ r8   .10170919    .0832524   .35586384   .08383618   .07309092
+ r9   .06607688           .   .08383618   .36524864   .08108236
+r10   .07273929   .06228719   .07309092   .08108236   .24550165
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. ***
+. * Panel B with Event Study Design
+. *
+. * Percentage of transitions by "regular" means
+. ***
+. 
+. *** All serious attempts
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=1,896)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   3,069
+Absorbing 2 HDFE groups                         F( 354,     88)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.2846
+                                                Adj R-squared     =    
+>  0.1206
+                                                Root MSE          =    
+>  0.3043
+                               (Std. Err. adjusted for 89 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0180761   .0458581    -0.39   0.694    -.1092094    .
+> 0730572
+         g_4 |  -.0061423    .055158    -0.11   0.912    -.1157573    .
+> 1034727
+         g_3 |  -.0023602   .0536544    -0.04   0.965     -.108987    .
+> 1042665
+         g_2 |  -.0291151   .0509797    -0.57   0.569    -.1304266    .
+> 0721964
+          g0 |  -.0785091   .0321002    -2.45   0.016    -.1423014   -.
+> 0147167
+          g1 |    .076391   .0632943     1.21   0.231     -.049393    .
+> 2021751
+          g2 |  -.0378957   .0505392    -0.75   0.455    -.1383319    .
+> 0625404
+          g3 |   .0063219   .0503586     0.13   0.900    -.0937553    .
+> 1063991
+          g4 |   .0065977   .0586633     0.11   0.911    -.1099832    .
+> 1231786
+          g5 |  -.0114638   .0494818    -0.23   0.817    -.1097984    .
+> 0868708
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.01807614  -.00614228  -.00236024   -.0291151  -.07850906
+ r1   .04585808   .00398563           .   .01981786           .
+ r2   .00398563   .05515803   .02089638           .           .
+ r3           .   .02089638   .05365436           .           .
+ r4   .01981786           .           .   .05097972           .
+ r5           .           .           .           .   .03210017
+ r6           .   .00742088   .01378529           .   .00637689
+ r7    .0099548           .           .   .02119642    .0101783
+ r8   .01481353           .           .   .01523289   .00988832
+ r9    .0124692           .           .   .01495589   .00401614
+r10   .01739574           .           .   .01802424   .00737145
+
+             g1          g2          g3          g4          g5
+ r1   .07639102  -.03789572   .00632194    .0065977   -.0114638
+ r1           .    .0099548   .01481353    .0124692   .01739574
+ r2   .00742088           .           .           .           .
+ r3   .01378529           .           .           .           .
+ r4           .   .02119642   .01523289   .01495589   .01802424
+ r5   .00637689    .0101783   .00988832   .00401614   .00737145
+ r6   .06329427   .01161024   .01449998           .           .
+ r7   .01161024   .05053925    .0224886   .02350239   .02487463
+ r8   .01449998    .0224886   .05035864   .01722465   .01907055
+ r9           .   .02350239   .01722465   .05866327   .02758835
+r10           .   .02487463   .01907055   .02758835   .04948178
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *** Tenure <= 10
+. preserve
+
+. keep if durgroup == 1
+(649 observations deleted)
+
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=1,506)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   2,420
+Absorbing 2 HDFE groups                         F( 305,     88)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.3016
+                                                Adj R-squared     =    
+>  0.1094
+                                                Root MSE          =    
+>  0.3304
+                               (Std. Err. adjusted for 89 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0189174   .0653265    -0.29   0.773    -.1487401    .
+> 1109054
+         g_4 |  -.0416495   .0772013    -0.54   0.591    -.1950709    .
+> 1117719
+         g_3 |   .0034659   .0825407     0.04   0.967    -.1605664    .
+> 1674983
+         g_2 |   .0118189   .0732165     0.16   0.872    -.1336835    .
+> 1573213
+          g0 |  -.1184898   .0499597    -2.37   0.020    -.2177742   -.
+> 0192054
+          g1 |   .0235734    .073646     0.32   0.750    -.1227824    .
+> 1699293
+          g2 |  -.0399195   .0559097    -0.71   0.477    -.1510283    .
+> 0711893
+          g3 |   .0225576   .0540142     0.42   0.677    -.0847842    .
+> 1298995
+          g4 |   .0042453   .0621984     0.07   0.946     -.119361    .
+> 1278517
+          g5 |  -.0237453   .0542926    -0.44   0.663    -.1316405    .
+> 0841499
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.01891739  -.04164953   .00346594   .01181894  -.11848977
+ r1   .06532653           .           .   .02249919           .
+ r2           .   .07720132   .02263051           .   .01276859
+ r3           .   .02263051   .08254071           .   .01223464
+ r4   .02249919           .           .   .07321649           .
+ r5           .   .01276859   .01223464           .    .0499597
+ r6           .   .00902626   .02209967           .   .00771348
+ r7   .01726717           .           .   .02703028   .01383235
+ r8   .02107065           .           .   .02373515   .00096074
+ r9   .01757721           .           .   .02545319           .
+r10   .02194101           .           .   .02573794           .
+
+             g1          g2          g3          g4          g5
+ r1   .02357344  -.03991951   .02255763   .00424534   -.0237453
+ r1           .   .01726717   .02107065   .01757721   .02194101
+ r2   .00902626           .           .           .           .
+ r3   .02209967           .           .           .           .
+ r4           .   .02703028   .02373515   .02545319   .02573794
+ r5   .00771348   .01383235   .00096074           .           .
+ r6   .07364595           .           .           .           .
+ r7           .   .05590971   .02110122   .02532914   .02693538
+ r8           .   .02110122   .05401417   .01774513   .02203854
+ r9           .   .02532914   .01774513   .06219845   .02974177
+r10           .   .02693538   .02203854   .02974177   .05429265
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Tenure > 10
+. preserve
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[
+> _n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[
+> _n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[
+> _n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[
+> _n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[
+> _n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[
+> _n+5]==2
+(78 real changes made)
+
+. 
+. keep if durgroup == 2
+(1,071 observations deleted)
+
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=1,227)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,996
+Absorbing 2 HDFE groups                         F( 216,     57)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.2370
+                                                Adj R-squared     =    
+>  0.0439
+                                                Root MSE          =    
+>  0.2448
+                               (Std. Err. adjusted for 58 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0149391   .0408476    -0.37   0.716    -.0967349    .
+> 0668567
+         g_4 |  -.0707584   .0332516    -2.13   0.038    -.1373435   -.
+> 0041733
+         g_3 |  -.0244069    .030952    -0.79   0.434    -.0863872    .
+> 0375733
+         g_2 |  -.0567465   .0301303    -1.88   0.065    -.1170813    .
+> 0035884
+          g0 |  -.0263291   .0362928    -0.73   0.471    -.0990042    .
+> 0463459
+          g1 |   .0821384   .0802774     1.02   0.311    -.0786143    .
+> 2428911
+          g2 |  -.0066555   .0697502    -0.10   0.924    -.1463279     
+> .133017
+          g3 |   .0756346   .0707375     1.07   0.289    -.0660147    .
+> 2172839
+          g4 |   .0289323   .0581112     0.50   0.620    -.0874335     
+> .145298
+          g5 |   .0178751   .0604202     0.30   0.768    -.1031143    .
+> 1388646
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.01493912  -.07075839  -.02440693  -.05674649  -.02632914
+ r1   .04084756   .00680313   .01296043   .01050185           .
+ r2   .00680313   .03325157   .00767259   .00921344    .0019583
+ r3   .01296043   .00767259   .03095197   .01322096           .
+ r4   .01050185   .00921344   .01322096   .03013028           .
+ r5           .    .0019583           .           .    .0362928
+ r6           .    .0058644           .           .   .01227255
+ r7   .01183024   .00568513   .01319043   .01092172   .01041534
+ r8           .   .00995687     .003969   .00551787    .0089238
+ r9   .01172742           .   .01200147   .01118755   .00761845
+r10   .00821384           .   .00831841   .00908901   .00408158
+
+             g1          g2          g3          g4          g5
+ r1   .08213843  -.00665548   .07563461   .02893229   .01787511
+ r1           .   .01183024           .   .01172742   .00821384
+ r2    .0058644   .00568513   .00995687           .           .
+ r3           .   .01319043     .003969   .01200147   .00831841
+ r4           .   .01092172   .00551787   .01118755   .00908901
+ r5   .01227255   .01041534    .0089238   .00761845   .00408158
+ r6   .08027738   .03223614   .03146565           .           .
+ r7   .03223614   .06975025   .03171753   .01440345   .00932866
+ r8   .03146565   .03171753   .07073747           .           .
+ r9           .   .01440345           .   .05811124   .03269973
+r10           .   .00932866           .   .03269973   .06042024
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. ***
+. * AUTOCRATS
+. ***
+. 
+. *** All serious attempts on autocrats
+. preserve 
+
+. keep if lautoc == 1
+(1,228 observations deleted)
+
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=1,114)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,841
+Absorbing 2 HDFE groups                         F( 250,     71)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.3288
+                                                Adj R-squared     =    
+>  0.1115
+                                                Root MSE          =    
+>  0.2235
+                               (Std. Err. adjusted for 72 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0557582   .0267449    -2.08   0.041     -.109086   -.
+> 0024304
+         g_4 |  -.0155013   .0442815    -0.35   0.727    -.1037961    .
+> 0727934
+         g_3 |  -.0070644    .045934    -0.15   0.878    -.0986541    .
+> 0845253
+         g_2 |   -.014913    .048741    -0.31   0.761    -.1120999    .
+> 0822738
+          g0 |  -.0412661   .0327506    -1.26   0.212    -.1065689    .
+> 0240367
+          g1 |   .0802586   .0670307     1.20   0.235    -.0533968    .
+> 2139141
+          g2 |   .0240275   .0640966     0.37   0.709    -.1037775    .
+> 1518326
+          g3 |   .0169571   .0547731     0.31   0.758    -.0922574    .
+> 1261715
+          g4 |  -.0417613    .041714    -1.00   0.320    -.1249366    .
+> 0414139
+          g5 |   -.084983   .0345177    -2.46   0.016    -.1538093   -.
+> 0161567
+-----------------------------------------------------------------------
+> -------
+
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1   -.0557582  -.01550134  -.00706441  -.01491303  -.04126611
+ r1    .0267449           .   .00242232   .00920282   .00505685
+ r2           .   .04428147   .00829792           .           .
+ r3   .00242232   .00829792   .04593395   .00639759           .
+ r4   .00920282           .   .00639759   .04874103   .00814338
+ r5   .00505685           .           .   .00814338   .03275058
+ r6           .   .00523708   .01075019   .00285971   .00844504
+ r7   .00873294   .00464461   .01005393   .01336685   .00973544
+ r8   .00536023           .           .   .00874731   .00683034
+ r9   .01244254           .           .   .01244656   .00968891
+r10   .01056365           .           .   .01449615   .00944427
+
+             g1          g2          g3          g4          g5
+ r1   .08025865   .02402752   .01695706  -.04176132  -.08498299
+ r1           .   .00873294   .00536023   .01244254   .01056365
+ r2   .00523708   .00464461           .           .           .
+ r3   .01075019   .01005393           .           .           .
+ r4   .00285971   .01336685   .00874731   .01244656   .01449615
+ r5   .00844504   .00973544   .00683034   .00968891   .00944427
+ r6   .06703073   .01381455   .00651719           .           .
+ r7   .01381455   .06409664    .0096867   .00924166     .004492
+ r8   .00651719    .0096867    .0547731   .00874871   .00832425
+ r9           .   .00924166   .00874871   .04171396   .01375045
+r10           .     .004492   .00832425   .01375045   .03451767
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrat with tenure <= 10
+. preserve 
+
+. keep if lautoc == 1 & durgroup == 1
+(1,746 observations deleted)
+
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=820)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,323
+Absorbing 2 HDFE groups                         F( 195,     71)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.3664
+                                                Adj R-squared     =    
+>  0.0964
+                                                Root MSE          =    
+>  0.2548
+                               (Std. Err. adjusted for 72 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0920401   .0385622    -2.39   0.020    -.1689309   -.
+> 0151493
+         g_4 |  -.0539336   .0777126    -0.69   0.490    -.2088881    .
+> 1010209
+         g_3 |  -.0377325   .0750026    -0.50   0.616    -.1872834    .
+> 1118184
+         g_2 |   .0345173   .0789468     0.44   0.663    -.1228982    .
+> 1919329
+          g0 |  -.0843758   .0644667    -1.31   0.195    -.2129188    .
+> 0441671
+          g1 |   .0166176    .086013     0.19   0.847    -.1548874    .
+> 1881226
+          g2 |   .0278895   .0702967     0.40   0.693    -.1122781    .
+> 1680571
+          g3 |   .0171807   .0599127     0.29   0.775    -.1022819    .
+> 1366433
+          g4 |  -.0442032   .0500471    -0.88   0.380    -.1439943    .
+> 0555878
+          g5 |  -.1001584   .0450325    -2.22   0.029    -.1899506   -.
+> 0103661
+-----------------------------------------------------------------------
+> -------
+
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.09204007  -.05393358  -.03773254   .03451731  -.08437583
+ r1   .03856217           .           .           .   .00871249
+ r2           .   .07771259   .01127599           .           .
+ r3           .   .01127599   .07500258           .           .
+ r4           .           .           .   .07894685   .01113395
+ r5   .00871249           .           .   .01113395    .0644667
+ r6           .           .   .01461259    .0139039      .02142
+ r7   .00393488           .   .00506363   .01618969   .01721918
+ r8   .00513889           .           .   .00860653   .00485823
+ r9   .01103511           .           .           .           .
+r10   .00300287           .           .   .02129031           .
+
+             g1          g2          g3          g4          g5
+ r1   .01661757    .0278895   .01718068  -.04420324  -.10015836
+ r1           .   .00393488   .00513889   .01103511   .00300287
+ r2           .           .           .           .           .
+ r3   .01461259   .00506363           .           .           .
+ r4    .0139039   .01618969   .00860653           .   .02129031
+ r5      .02142   .01721918   .00485823           .           .
+ r6   .08601297    .0211299   .01085775           .   .00954731
+ r7    .0211299   .07029667   .01279316   .01669328   .01066303
+ r8   .01085775   .01279316   .05991273   .01632575   .01908007
+ r9           .   .01669328   .01632575   .05004709    .0215514
+r10   .00954731   .01066303   .01908007    .0215514   .04503251
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrats with tenure > 10
+. preserve 
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[
+> _n-1]==2
+(959 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[
+> _n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[
+> _n+2]==2
+(76 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[
+> _n+3]==2
+(102 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[
+> _n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[
+> _n+5]==2
+(78 real changes made)
+
+. 
+. keep if lautoc == 1 & durgroup == 2
+(1,672 observations deleted)
+
+. eventstudyinteract exitregular g_5-g_2 g0-g5, cohort(first_success) c
+> ontrol_cohort(never_success) covariates(weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.
+> countrynum i.year) vce(cluster cowcode)
+(obs=839)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   1,397
+Absorbing 2 HDFE groups                         F( 177,     49)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.3434
+                                                Adj R-squared     =    
+>  0.1195
+                                                Root MSE          =    
+>  0.1793
+                               (Std. Err. adjusted for 50 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.0082205   .0230599    -0.36   0.723    -.0545612    .
+> 0381202
+         g_4 |  -.0018135   .0252994    -0.07   0.943    -.0526546    .
+> 0490275
+         g_3 |  -.0010145   .0265322    -0.04   0.970     -.054333     
+> .052304
+         g_2 |  -.0574588   .0367783    -1.56   0.125    -.1313676     
+>  .01645
+          g0 |  -.0250346   .0367561    -0.68   0.499    -.0988988    .
+> 0488296
+          g1 |   .0700065    .085835     0.82   0.419    -.1024853    .
+> 2424983
+          g2 |   .0254015   .0884247     0.29   0.775    -.1522946    .
+> 2030976
+          g3 |   .0559757    .075474     0.74   0.462    -.0956951    .
+> 2076465
+          g4 |    .007074   .0423286     0.17   0.868    -.0779885    .
+> 0921364
+          g5 |  -.0441335   .0371011    -1.19   0.240     -.118691     
+> .030424
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1  -.00822048  -.00181355   -.0010145   -.0574588  -.02503458
+ r1   .02305994   .00943821   .00433332   .01347611   .00336553
+ r2   .00943821   .02529941   .00756192   .00513699           .
+ r3   .00433332   .00756192   .02653223   .00617831   .00287056
+ r4   .01347611   .00513699   .00617831   .03677832           .
+ r5   .00336553           .   .00287056           .   .03675612
+ r6           .   .00082868           .           .   .02260388
+ r7   .01217198   .00870765   .00653978    .0128172   .02278765
+ r8   .00290458           .    .0041387   .00756673   .01409948
+ r9   .00956335    .0069166           .   .01230413   .00784901
+r10           .   .00377314           .   .01333587   .00159918
+
+             g1          g2          g3          g4          g5
+ r1   .07000647   .02540154   .05597568   .00707398  -.04413352
+ r1           .   .01217198   .00290458   .00956335           .
+ r2   .00082868   .00870765           .    .0069166   .00377314
+ r3           .   .00653978    .0041387           .           .
+ r4           .    .0128172   .00756673   .01230413   .01333587
+ r5   .02260388   .02278765   .01409948   .00784901   .00159918
+ r6   .08583495   .02344574   .01337491   .00135425    .0063213
+ r7   .02344574   .08842471   .01535241   .01521664   .00973202
+ r8   .01337491   .01535241   .07547405   .00125841   .00826792
+ r9   .00135425   .01521664   .00125841   .04232857   .00829215
+r10    .0063213   .00973202   .00826792   .00829215   .03710114
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *********************************************************************
+> ***********
+. ***
+. *** ROBUSTNESS (Part I.1)
+. ***
+. 
+. * use 5 leads and 5 lags as before (now with covariates)
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) contr
+> ol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 
+> weapondum5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.coun
+> trynum i.year) vce(cluster cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =    
+>   2,856
+Absorbing 2 HDFE groups                         F( 343,     88)   =    
+>       .
+                                                Prob > F          =    
+>       .
+                                                R-squared         =    
+>  0.1774
+                                                Adj R-squared     =    
+> -0.0233
+                                                Root MSE          =    
+>  1.9317
+                               (Std. Err. adjusted for 89 clusters in c
+> owcode)
+-----------------------------------------------------------------------
+> -------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. In
+> terval]
+-------------+---------------------------------------------------------
+> -------
+         g_5 |  -.2398417    .299149    -0.80   0.425    -.8343375    .
+> 3546541
+         g_4 |  -.0643995   .1053823    -0.61   0.543    -.2738246    .
+> 1450256
+         g_3 |   .1973479   .2710553     0.73   0.469    -.3413176    .
+> 7360133
+         g_2 |  -.0847094   .2499783    -0.34   0.736    -.5814887    .
+> 4120699
+          g0 |   .0527998   .5820261     0.09   0.928    -1.103855    1
+> .209454
+          g1 |  -.1392969    .311557    -0.45   0.656    -.7584511    .
+> 4798572
+          g2 |  -.5367977   .3912535    -1.37   0.174    -1.314332    .
+> 2407363
+          g3 |   .2194486   .1902191     1.15   0.252    -.1585719    .
+> 5974691
+          g4 |   -.152681   .4186157    -0.36   0.716    -.9845917    .
+> 6792298
+          g5 |   .1930181   .1796034     1.07   0.285     -.163906    .
+> 5499422
+-----------------------------------------------------------------------
+> -------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982
+ r1   .29914903   .01774129   .04980729           .           .
+ r2   .01774129   .10538225   .02018336           .   .04302679
+ r3   .04980729   .02018336    .2710553    .1070072           .
+ r4           .           .    .1070072   .24997829           .
+ r5           .   .04302679           .           .   .58202613
+ r6           .           .           .           .   .04558852
+ r7           .           .   .03353732   .03762982   .10950031
+ r8           .   .00186473           .           .   .05347398
+ r9   .13110142           .   .05375711   .11260503           .
+r10           .   .02864957   .10316653   .10405715    .0706929
+
+             g1          g2          g3          g4          g5
+ r1  -.13929692  -.53679773   .21944861  -.15268097   .19301806
+ r1           .           .           .   .13110142           .
+ r2           .           .   .00186473           .   .02864957
+ r3           .   .03353732           .   .05375711   .10316653
+ r4           .   .03762982           .   .11260503   .10405715
+ r5   .04558852   .10950031   .05347398           .    .0706929
+ r6   .31155703           .    .0668313           .           .
+ r7           .   .39125348   .02876789           .   .07566701
+ r8    .0668313   .02876789    .1902191           .    .0907165
+ r9           .           .           .   .41861569    .0318071
+r10           .   .07566701    .0907165    .0318071   .17960344
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapon
+> dum3 weapondum4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum
+> 4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *only leads
+. eventstudyinteract difpol2 g0-g10, cohort(first_success) control_coho
+> rt(never_success) covariates(weapondum2 weapondum3 weapondum4 weapond
+> um5 weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum 
+> i.year) vce(cluster cowcode)
+(obs=1,772)
+matsize too small
+    You have attempted to create a matrix with too many rows or
+    columns or attempted to fit a model with too many variables.  You
+    need to increase matsize; it is currently 400.  Use set matsize;
+    see help matsize.
+
+    If you are using factor variables and included an interaction
+    that has lots of missing cells, either increase matsize or set
+    emptycells drop to reduce the required matrix size; see help set
+    emptycells.
+
+    If you are using factor variables, you might have accidentally
+    treated a continuous variable as a categorical, resulting in lots
+    of categories.  Use the c. operator on such variables.
+r(908);
+
 end of do-file
+r(908);
+
+end of do-file
+r(908);

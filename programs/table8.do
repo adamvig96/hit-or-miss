@@ -1,4 +1,3 @@
-
 use "data/country_year_data.dta", clear
 
 tsset
@@ -86,186 +85,195 @@ replace outinfo2 = r(N) in `numvar'
 **************************************
 
 * Column 1: absnpolity2dummy11 
-tab absnpolity2dummy11 success if seriousattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
 reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) replace 	pval noastr rankpval(`pvalnonparm')
-
-tab absnpolity2dummy11 success if woundedbystander == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
-
-tab absnpolity2dummy11 success if wounded == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
-
-tab absnpolity2dummy11 success if attempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
-
-tab absnpolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
-
-tab absnpolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
-
 tab absnpolity2dummy11 success if seriousattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg absnpolity2dummy11 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+estadd scalar pvalnonparm1 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm1) replace nocons fragment
+
+ 
+reg absnpolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
+tab absnpolity2dummy11 success if woundedbystander == 1, exact chi2
+estadd scalar pvalnonparm2 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm2) append nocons fragment
+
+
+reg absnpolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
+tab absnpolity2dummy11 success if wounded == 1, exact chi2
+estadd scalar pvalnonparm3 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm3) append nocons fragment
+ 
+
+reg absnpolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode) 
+tab absnpolity2dummy11 success if attempt == 1, exact chi2
+estadd scalar pvalnonparm4 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm4) append nocons fragment
+ 
+
+reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
+tab absnpolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
+estadd scalar pvalnonparm5 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm5) append nocons fragment
+ 
+
+reg absnpolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
+tab absnpolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
+estadd scalar pvalnonparm6 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm6) append nocons fragment
+ 
+
+reg absnpolity2dummy11 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm 
+tab absnpolity2dummy11 success if seriousattempt == 1, exact chi2
+estadd scalar pvalnonparm7 = r(p_exact)
+esttab using "tables/table_8.tex", keep(success) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm7) append nocons fragment
 
 
 * Column 2: npolity2dummy11 
-tab npolity2dummy11 success if seriousattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
 reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11 success if woundedbystander == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11 success if wounded == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11 success if attempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
-
 tab npolity2dummy11 success if seriousattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
+estadd scalar  pvalnonparm8 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm8) append nocons fragment
+
+reg npolity2dummy11 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
+tab npolity2dummy11 success if woundedbystander == 1, exact chi2
+estadd scalar  pvalnonparm9 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm9) append nocons fragment
+
+reg npolity2dummy11 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
+tab npolity2dummy11 success if wounded == 1, exact chi2
+estadd scalar  pvalnonparm10 = r(p_exact)
+esttab using "tables/table_8.tex",cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm10) append nocons fragment
+
+reg npolity2dummy11 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
+tab npolity2dummy11 success if attempt == 1, exact chi2
+estadd scalar  pvalnonparm11 = r(p_exact)
+esttab using "tables/table_8.tex",cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm11) append nocons fragment
+
+reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
+tab npolity2dummy11 success if seriousattempt == 1 & solo == 1, exact chi2
+estadd scalar  pvalnonparm12 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm12) append nocons fragment
+
+reg npolity2dummy11 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
+tab npolity2dummy11 success if seriousattempt == 1 & firstattempt == 1, exact chi2
+estadd scalar  pvalnonparm13 = r(p_exact)
+esttab using "tables/table_8.tex",cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm13) append nocons fragment
+
 reg npolity2dummy11 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+tab npolity2dummy11 success if seriousattempt == 1, exact chi2
+estadd scalar  pvalnonparm14 = r(p_exact)
+esttab using "tables/table_8.tex",keep(success) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm14) append nocons fragment
 
 * Column 3: npolity2dummy11  for autocrats
 g npolity2dummy11A = npolity2dummy11  
-tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1, exact chi2
-local pvalnonparm = r(p_exact)
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1   , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11A success if woundedbystander == 1 & lautoc == 1 , exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11A success if wounded == 1 & lautoc == 1 , exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11A success if attempt == 1 & lautoc == 1 , exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if attempt == 1 , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & solo == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
-
-tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, exact chi2
-local pvalnonparm = r(p_exact)
-reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1  & firstattempt == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
-
 tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1, exact chi2
-local pvalnonparm = r(p_exact)
+estadd scalar  pvalnonparm15 = r(p_exact)
+esttab using "tables/table_8.tex",cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm15) append nocons fragment
+
+reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
+tab npolity2dummy11A success if woundedbystander == 1 & lautoc == 1 , exact chi2
+estadd scalar  pvalnonparm16 = r(p_exact)
+esttab using "tables/table_8.tex",cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm16) append nocons fragment
+
+reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
+tab npolity2dummy11A success if wounded == 1 & lautoc == 1 , exact chi2
+estadd scalar  pvalnonparm17 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm17) append nocons fragment
+
+reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if attempt == 1 , cluster(cowcode)
+tab npolity2dummy11A success if attempt == 1 & lautoc == 1 , exact chi2
+estadd scalar  pvalnonparm18 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm18) append nocons fragment
+
+reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
+tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & solo == 1, exact chi2
+estadd scalar  pvalnonparm19 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm19) append nocons fragment
+
+reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1  & firstattempt == 1, cluster(cowcode)
+tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, exact chi2
+estadd scalar  pvalnonparm20 = r(p_exact)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm20) append nocons fragment
+
 reg npolity2dummy11A successlautoc successldemoc lautoc `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+tab npolity2dummy11A success if seriousattempt == 1 & lautoc == 1, exact chi2
+estadd scalar  pvalnonparm21 = r(p_exact)
+esttab using "tables/table_8.tex",keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm21) append nocons fragment
 
 
 * Column 4: perexitregularNC201
-ranksumben perexitregularNC201 if seriousattempt == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Baseline) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201 if seriousattempt == 1, by(success)
+estadd scalar  pvalnonparm22 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm22) append nocons fragment
 
-ranksumben perexitregularNC201  if woundedbystander == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if woundedbystander == 1, by(success)
+estadd scalar  pvalnonparm23 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm23) append nocons fragment
 
-ranksumben perexitregularNC201  if wounded == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if wounded == 1, by(success)
+estadd scalar  pvalnonparm24 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm24) append nocons fragment
 
-ranksumben perexitregularNC201  if attempt == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if attempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if attempt == 1, by(success)
+estadd scalar  pvalnonparm25 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm25) append nocons fragment
 
-ranksumben perexitregularNC201  if seriousattempt == 1 & solo == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if seriousattempt == 1 & solo == 1, by(success)
+estadd scalar pvalnonparm26 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm26) append nocons fragment
 
-ranksumben perexitregularNC201  if seriousattempt == 1 & firstattempt == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' if seriousattempt == 1 & firstattempt == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if seriousattempt == 1 & firstattempt == 1, by(success)
+estadd scalar  pvalnonparm27 = r(p)
+esttab using "tables/table_8.tex", cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm27) append nocons fragment
 
-ranksumben perexitregularNC201  if seriousattempt == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201 success `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(success) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201  if seriousattempt == 1, by(success)
+estadd scalar  pvalnonparm28 = r(p)
+esttab using "tables/table_8.tex", keep(success) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm28) append nocons fragment
 
 * Column 5: perexitregularNC201 autocrats
 g perexitregularNC201A = perexitregularNC201 
 
-ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1   , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Baseline) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
+estadd scalar  pvalnonparm29 = r(p)
+esttab using "tables/table_8.tex",keep(successlautoc)  cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm29) append nocons fragment
 
-ranksumben perexitregularNC201A if woundedbystander == 1 & lautoc == 1 , by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if woundedbystander == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(WoundBystander) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if woundedbystander == 1 & lautoc == 1 , by(success)
+estadd scalar  pvalnonparm30 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm30) append nocons fragment
 
-ranksumben perexitregularNC201A if wounded == 1 & lautoc == 1 , by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if wounded ==  1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(TargetWounded) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if wounded == 1 & lautoc == 1 , by(success)
+estadd scalar  pvalnonparm31 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm31) append nocons fragment
 
-ranksumben perexitregularNC201A if attempt == 1 & lautoc == 1 , by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if attempt == 1 , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AnyAttempt) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if attempt == 1 & lautoc == 1 , by(success)
+estadd scalar  pvalnonparm32 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm32) append nocons fragment
 
-ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & solo == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1 & solo == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(Solo) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & solo == 1, by(success)
+estadd scalar  pvalnonparm33 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm33) append nocons fragment
 
-ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' if seriousattempt == 1  & firstattempt == 1, cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(FirstAttempt) append pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if seriousattempt == 1 & lautoc == 1 & firstattempt == 1, by(success)
+estadd scalar  pvalnonparm34 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm34) append nocons fragment
 
-ranksumben perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
-local pvalnonparm = r(p)
 reg perexitregularNC201A successlautoc successldemoc lautoc `fixedeffectvars' qtrcentury* lpol2dum pol2duml1l3 lzGledAnywar anywarl1l3 llnenergy_pc llnpop lage lclock regdumAfrica regdumAsia regdumMENA regdumLatAm regdumEEur if seriousattempt == 1  , cluster(cowcode)
-maketablerank using "tables/table_8.tex", rhs(successlautoc) varcol(AddControls) append 	pval noastr rankpval(`pvalnonparm')
+ranksum perexitregularNC201A if seriousattempt == 1 & lautoc == 1, by(success)
+estadd scalar  pvalnonparm35 = r(p)
+esttab using "tables/table_8.tex", keep(successlautoc) cells(b(fmt(2)) se(fmt(2)) p(fmt(2) par)) stats(pvalnonparm35) append nocons fragment
+
+
+*END
