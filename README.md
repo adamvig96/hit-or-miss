@@ -2,7 +2,7 @@
 
 Authors: Niccolò Borri, Philipp Hilmbauer, Ramzi Chariag, Marton Vegh, Adam Vig
 
-The repository contains code and data to replicate our project to the Empirical Political Economy class at CEU 2022 Winter.
+The repository contains the paper, code and data for our replication exercise for the Empirical Political Economy class at CEU 2022 Winter
 
 ### Abstract
 
@@ -13,7 +13,7 @@ results of the original analysis, we add controls and fixed effects to examine
 the robustness of their main results, and we employ an event study design to
 investigate the dynamic aspects of the post-assassination period. Overall, the
 results are largely reproducible and robust, however the effects cannot be found
-when adding the dynamic component to the analysis
+when adding the dynamic component to the analysis.
 
 ### Instructions for replicators
 

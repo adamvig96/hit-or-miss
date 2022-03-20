@@ -1,6 +1,9 @@
 
 cd "/Users/adamvig/Dropbox/CEU/5. trimester/PolEcon/hit-or-miss"
 
+* Set your project directory here
+* cd "/your/project/path"
+
 capture mkdir "tables"
 
 do "programs/create_country_year_data.do"
