@@ -1,0 +1,31 @@
+\documentclass[]{article}
+\setlength{\pdfpagewidth}{8.5in} \setlength{\pdfpageheight}{11in}
+\begin{document}
+\begin{tabular}{lccccccccc}
+\multicolumn{10}{c}{Predicting attempts} \\ \hline
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) \\
+VARIABLES & seriousattempt & seriousattempt & seriousattempt & seriousattempt & seriousattempt & seriousattempt & seriousattempt & seriousattempt & seriousattempt \\ \hline
+ &  &  &  &  &  &  &  &  &  \\
+lpol2dum & -0.007* &  &  &  &  &  &  &  & 0.000 \\
+ & (0.004) &  &  &  &  &  &  &  & (0.003) \\
+pol2duml1l3 &  & -0.012* &  &  &  &  &  &  & -0.009 \\
+ &  & (0.007) &  &  &  &  &  &  & (0.007) \\
+lanywar &  &  & 0.028*** &  &  &  &  &  & 0.025*** \\
+ &  &  & (0.006) &  &  &  &  &  & (0.007) \\
+anywarl1l3 &  &  &  & 0.004 &  &  &  &  & -0.007 \\
+ &  &  &  & (0.006) &  &  &  &  & (0.005) \\
+llnenergy\_pc &  &  &  &  & -0.003*** &  &  &  & -0.002*** \\
+ &  &  &  &  & (0.001) &  &  &  & (0.001) \\
+llnpop &  &  &  &  &  & 0.005*** &  &  & 0.004*** \\
+ &  &  &  &  &  & (0.001) &  &  & (0.001) \\
+lage &  &  &  &  &  &  & -0.000* &  & -0.000** \\
+ &  &  &  &  &  &  & (0.000) &  & (0.000) \\
+ltenure &  &  &  &  &  &  &  & -0.000 & -0.000 \\
+ &  &  &  &  &  &  &  & (0.000) & (0.000) \\
+ &  &  &  &  &  &  &  &  &  \\
+Observations & 11,171 & 10,763 & 11,671 & 11,258 & 9,664 & 10,607 & 12,019 & 12,133 & 8,904 \\
+ P-val & 0.0822 & 0.0740 & 1.50e-10 & 0.468 & 0.000329 & 5.05e-06 & 0.0805 & 0.604 & 0 \\ \hline
+\multicolumn{10}{c}{ Robust standard errors in parentheses} \\
+\multicolumn{10}{c}{ *** p$<$0.01, ** p$<$0.05, * p$<$0.1} \\
+\end{tabular}
+\end{document}

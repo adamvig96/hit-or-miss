@@ -5216,6 +5216,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 . *est store reg2
 . maketablerank using "tables/table_6", rhs(success) varcol(All) append pval noastr
 >  rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1, exact chi2
@@ -5268,6 +5269,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 . *est store reg3
 . maketablerank using "tables/table_6", rhs(success) varcol(All) append pval noastr
 >  rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1, by(success)
@@ -5321,6 +5323,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 . *est store reg4
 . maketablerank using "tables/table_6", rhs(success) varcol(All) append pval noastr
 >  rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1, by(success)
@@ -5374,6 +5377,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 . *est store reg5
 . maketablerank using "tables/table_6", rhs(success) varcol(All) append pval noastr
 >  rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1, by(success)
@@ -5427,6 +5431,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 . *est store reg6
 . maketablerank using "tables/table_6", rhs(success) varcol(All) append pval noastr
 >  rankpval(`pvalnonparm')
+File not found
 
 . 
 . *esttab reg1 reg2 reg3 reg4 reg5 reg6 using test.tex,keep(success) replace 
@@ -5482,6 +5487,7 @@ npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append  pval noas
 > tr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1 & durgroup == 1, exact chi2
@@ -5533,6 +5539,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1 & durgroup == 1, exact chi2
@@ -5584,6 +5591,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1 & durgroup == 1, by(success
@@ -5637,6 +5645,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1 & durgroup == 1, by(success
@@ -5690,6 +5699,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1 & durgroup == 1, by(succes
@@ -5743,6 +5753,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TL10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -5796,6 +5807,7 @@ npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append  pval noas
 > tr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1 & durgroup == 2, exact chi2
@@ -5847,6 +5859,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1 & durgroup == 2, exact chi2
@@ -5898,6 +5911,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1 & durgroup == 2, by(success
@@ -5951,6 +5965,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1 & durgroup == 2, by(success
@@ -6004,6 +6019,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1 & durgroup == 2, by(succes
@@ -6057,6 +6073,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(TG10) append pval noast
 > r rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -6106,6 +6123,7 @@ npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1 & lautoc == 1, exact chi2
@@ -6152,6 +6170,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1 & lautoc == 1, exact chi2
@@ -6198,6 +6217,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1 & lautoc == 1, by(success)
@@ -6250,6 +6270,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1 & lautoc == 1, by(success)
@@ -6302,6 +6323,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1 & lautoc == 1, by(success)
@@ -6354,6 +6376,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-All) append pval 
 > noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -6403,6 +6426,7 @@ npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append    p
 > val noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1 & lautoc == 1 & durgroup == 1
@@ -6450,6 +6474,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1 & lautoc == 1 & durgroup == 
@@ -6497,6 +6522,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1 & lautoc == 1 & durgroup ==
@@ -6550,6 +6576,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1 & lautoc == 1 & durgroup ==
@@ -6603,6 +6630,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1 & lautoc == 1 & durgroup =
@@ -6656,6 +6684,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TL10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -6705,6 +6734,7 @@ npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append    p
 > val noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1 & lautoc == 1 & durgroup == 2
@@ -6752,6 +6782,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1 & lautoc == 1 & durgroup == 
@@ -6799,6 +6830,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1 & lautoc == 1 & durgroup ==
@@ -6852,6 +6884,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1 & lautoc == 1 & durgroup ==
@@ -6905,6 +6938,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1 & lautoc == 1 & durgroup =
@@ -6958,6 +6992,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6", rhs(success) varcol(Autoc-TG10) append pval
 >  noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -7067,6 +7102,7 @@ npolity~y101 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(No Interaction) append
 >  pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1, exact chi2
@@ -7120,6 +7156,7 @@ npolity~y201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(No Interaction) append
 >  pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1, by(success)
@@ -7174,6 +7211,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(No Interaction) append
 >  pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC201 if seriousattempt == 1, by(success)
@@ -7228,6 +7266,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(No Interaction) append
 >  pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1, by(success)
@@ -7282,6 +7321,7 @@ perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(No Interaction) append
 >  pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -7341,6 +7381,7 @@ inter_autoc_dur |   .1793939   .2606008     0.69   0.493    -.3386634    .697451
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(With Interaction) appe
 > nd     pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy101 success if seriousattempt == 1, exact chi2
@@ -7395,6 +7436,7 @@ inter_autoc_dur |   .1501973   .1737339     0.86   0.390    -.1956115    .496006
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(With Interaction) appe
 > nd pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . tab npolity2dummy201  success if seriousattempt == 1, exact chi2
@@ -7449,6 +7491,7 @@ inter_autoc_dur |   .1612839   .3765538     0.43   0.670     -.589016    .911583
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(With Interaction) appe
 > nd pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC101 if seriousattempt == 1, by(success)
@@ -7560,6 +7603,7 @@ inter_autoc_dur |   .2701164   .1488276     1.81   0.075    -.0281409    .568373
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(With Interaction) appe
 > nd pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . ranksumben perexitregularNC2010 if seriousattempt == 1, by(success)
@@ -7615,6 +7659,7 @@ inter_autoc_dur |   .3464259   .1791839     1.93   0.059    -.0131329    .705984
 
 . maketablerank using "tables/table_6b", rhs(success) varcol(With Interaction) appe
 > nd pval noastr rankpval(`pvalnonparm')
+File not found
 
 . 
 . 
@@ -12466,6 +12511,4317 @@ added scalar:
 . 
 end of do-file
 
-. *do "programs/event_study.do"
+. do "programs/eventstudy.do"
+
+. 
+. *******************************************************************
+. * Subject: Empirical Political Economy
+. * Authors: Philipp, Niccolo, Ramzi, Marton & Adam
+. * Project: "Hit or Miss"
+. *******************************************************************
+. 
+. version 9.2
+
+. clear
+
+. set mem 300m
+
+. set more off
+
+. set matsize 2000
+
+. 
+. local fixedeffectvars = "weapondum* numserdum* "                
+
+. 
+. 
+. use "data/country_year_data.dta", clear
+
+. 
+. **************************************
+. *** Table 6: Tenure of Leader and Duration Effects
+. **************************************
+. 
+. * Column 1: All serious attempts
+. 
+. tab npolity2dummy11 success if seriousattempt == 1, exact chi2
+
+Enumerating sample-space combinations:
+stage 3:  enumerations = 1
+stage 2:  enumerations = 6
+stage 1:  enumerations = 0
+
+npolity2du |        Success
+     mmy11 |         0          1 |     Total
+-----------+----------------------+----------
+        -1 |         5          2 |         7 
+         0 |       156         49 |       205 
+         1 |         3          6 |         9 
+-----------+----------------------+----------
+     Total |       164         57 |       221 
+
+          Pearson chi2(2) =   8.2670   Pr = 0.016
+           Fisher's exact =                 0.016
+
+. local pvalnonparm = r(p_exact)
+
+. reg npolity2dummy11 success weapondum2 weapondum3 weapondum4 weapondum5 weapondum
+> 6 numserdum2 numserdum3 numserdum4 if seriousattempt == 1  , cluster(cowcode)
+
+Linear regression                               Number of obs     =        221
+                                                F(6, 86)          =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.0320
+                                                Root MSE          =     .27014
+
+                               (Std. Err. adjusted for 87 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     success |   .0789814   .0507891     1.56   0.124    -.0219839    .1799467
+  weapondum2 |  -.0939155   .0928501    -1.01   0.315    -.2784954    .0906644
+  weapondum3 |  -.0124761   .0294337    -0.42   0.673    -.0709884    .0460363
+  weapondum4 |          0  (omitted)
+  weapondum5 |    .065378   .0752636     0.87   0.387    -.0842412    .2149971
+  weapondum6 |   .0634951   .0774736     0.82   0.415    -.0905174    .2175076
+  numserdum2 |  -.0052785   .1046825    -0.05   0.960    -.2133805    .2028235
+  numserdum3 |    .010874   .0259007     0.42   0.676    -.0406149    .0623629
+  numserdum4 |  -.1316025    .089035    -1.48   0.143    -.3085983    .0453933
+       _cons |   -.010874   .0259007    -0.42   0.676    -.0623629    .0406149
+------------------------------------------------------------------------------
+
+. *maketablerank using table_6, rhs(success) varcol(All) replace  pval noastr rankp
+> val(`pvalnonparm')
+. 
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. 
+. ***
+. * eventstudy code
+. ***
+. 
+. *preserve original data
+. *preserve
+. 
+. * prepare data 
+. *remove the duplicates around the ten year window for eventstudy
+. replace success=0 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(1 real change made)
+
+. replace success=0 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-6]==1 & cowcode[_n-6]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-7]==1 & cowcode[_n-7]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-8]==1 & cowcode[_n-8]==cowcode
+(0 real changes made)
+
+. replace success=0 if success[_n-9]==1 & cowcode[_n-9]==cowcode
+(1 real change made)
+
+. replace success=0 if success[_n-10]==1 & cowcode[_n-10]==cowcode
+(1 real change made)
+
+. 
+. *condition on seriousattempt
+. gen panel_attempt=1 if seriousattempt[_n+10]==1 & cowcode[_n+10]==cowcode
+(12,144 missing values generated)
+
+. replace panel_attempt=1 if seriousattempt[_n+9]==1 & cowcode[_n+9]==cowcode
+(184 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+8]==1 & cowcode[_n+8]==cowcode
+(180 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+7]==1 & cowcode[_n+7]==cowcode
+(177 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+6]==1 & cowcode[_n+6]==cowcode
+(175 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+5]==1 & cowcode[_n+5]==cowcode
+(169 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+4]==1 & cowcode[_n+4]==cowcode
+(165 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+3]==1 & cowcode[_n+3]==cowcode
+(158 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+2]==1 & cowcode[_n+2]==cowcode
+(157 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n+1]==1 & cowcode[_n+1]==cowcode
+(153 real changes made)
+
+. replace panel_attempt=1 if seriousattempt==1 
+(148 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-1]==1 & cowcode[_n-1]==cowcode
+(143 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-2]==1 & cowcode[_n-2]==cowcode
+(137 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-3]==1 & cowcode[_n-3]==cowcode
+(130 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-4]==1 & cowcode[_n-4]==cowcode
+(124 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-5]==1 & cowcode[_n-5]==cowcode
+(122 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-6]==1 & cowcode[_n-6]==cowcode
+(118 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-7]==1 & cowcode[_n-7]==cowcode
+(113 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-8]==1 & cowcode[_n-8]==cowcode
+(110 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-9]==1 & cowcode[_n-9]==cowcode
+(106 real changes made)
+
+. replace panel_attempt=1 if seriousattempt[_n-10]==1 & cowcode[_n-10]==cowcode
+(103 real changes made)
+
+. 
+. ***
+. * condition on attempts
+. ***
+. 
+. keep if panel_attempt==1 
+(9,272 observations deleted)
+
+. 
+. 
+. ***
+. 
+. *for later diagnostics
+. *create the success indicator variable
+. gen panel_success=-5 if success[_n+5]==1 & cowcode[_n+5]==cowcode
+(3,019 missing values generated)
+
+. replace panel_success=-4 if success[_n+4]==1 & cowcode[_n+4]==cowcode
+(52 real changes made)
+
+. replace panel_success=-3 if success[_n+3]==1 & cowcode[_n+3]==cowcode
+(54 real changes made)
+
+. replace panel_success=-2 if success[_n+2]==1 & cowcode[_n+2]==cowcode
+(55 real changes made)
+
+. replace panel_success=-1 if success[_n+1]==1 & cowcode[_n+1]==cowcode
+(55 real changes made)
+
+. replace panel_success=0 if success==1 
+(56 real changes made)
+
+. replace panel_success=1 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(56 real changes made)
+
+. replace panel_success=2 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(56 real changes made)
+
+. replace panel_success=3 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(56 real changes made)
+
+. replace panel_success=4 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(54 real changes made)
+
+. replace panel_success=5 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(54 real changes made)
+
+. 
+. *shift to pos. values
+. replace panel_success=panel_success+6
+(598 real changes made)
+
+. replace panel_success=0 if panel_success==.
+(2,471 real changes made)
+
+. 
+. 
+. *create the success dummies like discussed
+. gen success_m5=0
+
+. replace success_m5=1 if success[_n+5]==1 & cowcode[_n+5]==cowcode
+(50 real changes made)
+
+. gen success_m4=0
+
+. replace success_m4=1 if success[_n+4]==1 & cowcode[_n+4]==cowcode
+(52 real changes made)
+
+. gen success_m3=0
+
+. replace success_m3=1 if success[_n+3]==1 & cowcode[_n+3]==cowcode
+(54 real changes made)
+
+. gen success_m2=0
+
+. replace success_m2=1 if success[_n+2]==1 & cowcode[_n+2]==cowcode
+(55 real changes made)
+
+. gen success_m1=0
+
+. replace success_m1=1 if success[_n+1]==1 & cowcode[_n+1]==cowcode
+(55 real changes made)
+
+. 
+. gen success_p0=0
+
+. replace success_p0=1 if success==1 
+(56 real changes made)
+
+. 
+. gen success_p1=0
+
+. replace success_p1=1 if success[_n-1]==1 & cowcode[_n-1]==cowcode
+(56 real changes made)
+
+. gen success_p2=0
+
+. replace success_p2=1 if success[_n-2]==1 & cowcode[_n-2]==cowcode
+(56 real changes made)
+
+. gen success_p3=0
+
+. replace success_p3=1 if success[_n-3]==1 & cowcode[_n-3]==cowcode
+(56 real changes made)
+
+. gen success_p4=0
+
+. replace success_p4=1 if success[_n-4]==1 & cowcode[_n-4]==cowcode
+(54 real changes made)
+
+. gen success_p5=0
+
+. replace success_p5=1 if success[_n-5]==1 & cowcode[_n-5]==cowcode
+(54 real changes made)
+
+. 
+. 
+. ***
+. *NEW CODE WITH EVENTSTUDY INTERACT PACKAGE
+. ***
+. 
+. *INSTALL PACKAGES
+. *ssc install eventstudyinteract, all replace
+. *ssc install avar
+. *ssc install reghdfe
+. *ssc install ftools
+. 
+. *gen our outcome of interest
+. gen difpol2= polity2 - l.polity2 if cowcode[_n-1]==cowcode
+(213 missing values generated)
+
+. gen chgpol2= difpol2
+(213 missing values generated)
+
+. replace chgpol2= 0 if difpol2 ==.
+(213 real changes made)
+
+. replace chgpol2= 1 if chgpol2 >=1
+(120 real changes made)
+
+. replace chgpol2= -1 if chgpol2 <=-1 
+(105 real changes made)
+
+. 
+. 
+. *code the cohort categorical variable based on when the individual first joined t
+> he union, which will be
+. *inputted in cohort(varname).
+. gen success_year = year if success == 1
+(3,013 missing values generated)
+
+. bysort cowcode: egen first_success = min(success_year)
+(1173 missing values generated)
+
+. *drop success_year
+.  
+. *code the relative time categorical variable.
+. gen relative_year = year - first_success
+(1,173 missing values generated)
+
+. 
+. *for the first example, we take the control cohort to be individuals that never u
+> nionized.
+. gen never_success = (first_success == .)
+
+. 
+. *we will consider the dynamic effect of union status on income.  We first generat
+> e these relative time
+. *indicators, and leave out the distant leads due to few observations.  Implicitly
+>  this assumes that effects
+. *outside the lead windows are zero.
+.  
+.  forvalues k = 10(-1)2 {
+  2.  gen g_`k' = relative_year == -`k'
+  3.  }
+
+.  forvalues k = 0/10 {
+  2.  gen g`k' = relative_year == `k'
+  3.  }
+
+.         
+. *we use the IW estimator to estimate the dynamic effect on log wage associated wi
+> th each relative time.
+. *with many leads and lags, we need a large matrix size to hold intermediate estim
+> ates.
+. 
+. 
+. ********************************************************************************
+. 
+. ***
+. * Panel A with Event Study
+. *
+. * Directional change in POLITY2 dummy
+. ***
+. 
+. * use 2 leads and 10 lags as before
+. 
+. *** All serious attempts
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 241,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1780
+                                                Adj R-squared     =     0.0210
+                                                Root MSE          =     1.8895
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0698499   .2456469    -0.28   0.777    -.5580215    .4183218
+          g0 |  -.0070383    .575761    -0.01   0.990    -1.151242    1.137166
+          g2 |  -.5597124   .3895144    -1.44   0.154     -1.33379    .2143657
+          g4 |  -.1728737   .4254024    -0.41   0.685    -1.018272    .6725241
+          g6 |  -.2879794   .2346081    -1.23   0.223    -.7542138     .178255
+          g8 |   .3422176    .304914     1.12   0.265    -.2637349    .9481701
+         g10 |   .1571173   .3051044     0.51   0.608    -.4492136    .7634482
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.06984989  -.00703829  -.55971236  -.17287374  -.28797941    .3422176
+r1   .24564692           .   .04967741    .1072889   .09627304   .06254926
+r2           .   .57576103   .10440412           .           .           .
+r3   .04967741   .10440412   .38951441           .   .10706928   .02646492
+r4    .1072889           .           .   .42540239   .03066729           .
+r5   .09627304           .   .10706928   .03066729   .23460815   .06950596
+r6   .06254926           .   .02646492           .   .06950596     .304914
+r7   .04185387    .0966189   .08926428           .           .   .01225914
+
+           g10
+r1   .15711733
+r1   .04185387
+r2    .0966189
+r3   .08926428
+r4           .
+r5           .
+r6   .01225914
+r7   .30510441
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment replace
+(note: file tables/event_table6.tex not found)
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *** Tenure <= 10
+. preserve
+
+. keep if durgroup == 1
+(649 observations deleted)
+
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=1,429)
+
+IW estimates for dynamic effects                Number of obs     =      2,278
+Absorbing 2 HDFE groups                         F( 225,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1964
+                                                Adj R-squared     =     0.0028
+                                                Root MSE          =     1.8779
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.2201204   .3018236    -0.73   0.468    -.8199313    .3796906
+          g0 |  -.5664464   .6506226    -0.87   0.386    -1.859422    .7265294
+          g2 |  -.6144713   .4092044    -1.50   0.137    -1.427679    .1987365
+          g4 |  -.2105908   .4370704    -0.48   0.631    -1.079176    .6579948
+          g6 |  -.3120389   .2396402    -1.30   0.196    -.7882734    .1641956
+          g8 |   .3685791   .3026241     1.22   0.227    -.2328227    .9699809
+         g10 |   .1450247   .3119935     0.46   0.643    -.4749969    .7650463
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.22012039  -.56644642  -.61447132  -.21059081  -.31203888   .36857912
+r1   .30182358   .08203744   .10008692   .09821184   .06159904   .03988252
+r2   .08203744   .65062265   .15494064   .13545481   .09925146   .01427156
+r3   .10008692   .15494064   .40920443   .06354306   .11024243   .05545149
+r4   .09821184   .13545481   .06354306   .43707044   .07444291   .02103011
+r5   .06159904   .09925146   .11024243   .07444291   .23964017   .08969033
+r6   .03988252   .01427156   .05545149   .02103011   .08969033    .3026241
+r7   .03176476    .0819388   .09711274           .           .           .
+
+           g10
+r1   .14502472
+r1   .03176476
+r2    .0819388
+r3   .09711274
+r4           .
+r5           .
+r6           .
+r7   .31199354
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment append
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+
+. restore
+
+. 
+. 
+. *** Tenure > 10
+. preserve
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[_n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[_n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[_n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[_n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[_n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[_n+5]==2
+(78 real changes made)
+
+. 
+. keep if durgroup == 2
+(1,071 observations deleted)
+
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=1,147)
+
+IW estimates for dynamic effects                Number of obs     =      1,859
+Absorbing 2 HDFE groups                         F( 148,     56)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1899
+                                                Adj R-squared     =     0.0130
+                                                Root MSE          =     1.9524
+                               (Std. Err. adjusted for 57 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.1006423   .4178939    -0.24   0.811    -.9377844    .7364997
+          g0 |   .4382411   .7791602     0.56   0.576    -1.122604    1.999087
+          g2 |  -.7981905     .69822    -1.14   0.258    -2.196893    .6005123
+          g4 |   .0250126   .2641447     0.09   0.925    -.5041328    .5541579
+          g6 |  -.4148874   .4025149    -1.03   0.307    -1.221222    .3914467
+          g8 |   .2744113   .3210023     0.85   0.396    -.3686335    .9174562
+         g10 |   .1226116   .5458742     0.22   0.823    -.9709059    1.216129
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.10064233    .4382411  -.79819054   .02501255  -.41488744   .27441134
+r1   .41789388   .06272371           .   .13654642   .12528297    .0954537
+r2   .06272371   .77916023           .           .   .06709781           .
+r3           .           .   .69822004           .   .18855852    .0276214
+r4   .13654642           .           .   .26414466           .   .03327327
+r5   .12528297   .06709781   .18855852           .   .40251487   .05949952
+r6    .0954537           .    .0276214   .03327327   .05949952   .32100227
+r7   .08650679   .10331455           .   .03738586    .0487684   .07976491
+
+           g10
+r1   .12261156
+r1   .08650679
+r2   .10331455
+r3           .
+r4   .03738586
+r5    .0487684
+r6   .07976491
+r7    .5458742
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment append
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. ***
+. * AUTOCRATS
+. ***
+. 
+. *** All serious attempts on autocrats
+. preserve 
+
+. keep if lautoc == 1
+(1,228 observations deleted)
+
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=1,071)
+
+IW estimates for dynamic effects                Number of obs     =      1,770
+Absorbing 2 HDFE groups                         F( 173,     71)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2946
+                                                Adj R-squared     =     0.1061
+                                                Root MSE          =     1.6627
+                               (Std. Err. adjusted for 72 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.1375966    .235886    -0.58   0.562    -.6079399    .3327468
+          g0 |    .115388   .6950355     0.17   0.869    -1.270473    1.501249
+          g2 |  -.2009837   .2722936    -0.74   0.463    -.7439217    .3419544
+          g4 |   .2632782   .4581195     0.57   0.567    -.6501861    1.176743
+          g6 |  -.4791573   .3743318    -1.28   0.205    -1.225554     .267239
+          g8 |   .3252283   .4350689     0.75   0.457    -.5422744    1.192731
+         g10 |   .1776268    .482294     0.37   0.714    -.7840401    1.139294
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.13759657     .115388  -.20098369   .26327822  -.47915731   .32522834
+r1     .235886   .06273353           .   .14704631           .    .0457512
+r2   .06273353    .6950355           .           .    .0653403           .
+r3           .           .   .27229361   .04077743   .11895522    .0354043
+r4   .14704631           .   .04077743   .45811951   .08815225   .08482541
+r5           .    .0653403   .11895522   .08815225   .37433176   .12263386
+r6    .0457512           .    .0354043   .08482541   .12263386    .4350689
+r7   .04333624   .12915434   .01816003   .05003389    .0840721   .07761416
+
+           g10
+r1   .17762679
+r1   .04333624
+r2   .12915434
+r3   .01816003
+r4   .05003389
+r5    .0840721
+r6   .07761416
+r7   .48229397
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment append
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. *** Autocrat with tenure <= 10
+. preserve 
+
+. keep if lautoc == 1 & durgroup == 1
+(1,746 observations deleted)
+
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=787)
+
+IW estimates for dynamic effects                Number of obs     =      1,272
+Absorbing 2 HDFE groups                         F( 152,     71)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.3352
+                                                Adj R-squared     =     0.0805
+                                                Root MSE          =     1.6401
+                               (Std. Err. adjusted for 72 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0291021   .2415279    -0.12   0.904     -.510695    .4524908
+          g0 |  -.6048503   .6962363    -0.87   0.388    -1.993106    .7834055
+          g2 |   -.336229   .3222315    -1.04   0.300    -.9787405    .3062824
+          g4 |   .0559952   .4853484     0.12   0.908     -.911762    1.023753
+          g6 |  -.6097466   .4145939    -1.47   0.146    -1.436423    .2169302
+          g8 |   .2582472   .4715917     0.55   0.586    -.6820798    1.198574
+         g10 |   .1244708   .4817462     0.26   0.797    -.8361038    1.085045
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.02910211  -.60485027  -.33622901   .05599525  -.60974657   .25824722
+r1   .24152786    .0605691           .   .09789141   .10688598   .05368726
+r2    .0605691    .6962363           .   .08054497           .           .
+r3           .           .   .32223155   .14992445    .1327218   .05794924
+r4   .09789141   .08054497   .14992445   .48534842   .14094519   .10928576
+r5   .10688598           .    .1327218   .14094519   .41459392   .17197869
+r6   .05368726           .   .05794924   .10928576   .17197869   .47159166
+r7   .07129155   .14471962   .05615253   .11299653   .10999458   .10003957
+
+           g10
+r1   .12447083
+r1   .07129155
+r2   .14471962
+r3   .05615253
+r4   .11299653
+r5   .10999458
+r6   .10003957
+r7   .48174618
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment append
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrats with tenure > 10
+. preserve 
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[_n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[_n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[_n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[_n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[_n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[_n+5]==2
+(78 real changes made)
+
+. 
+. keep if lautoc == 1 & durgroup == 2
+(1,672 observations deleted)
+
+. eventstudyinteract difpol2 g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) control_
+> cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weap
+> ondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster 
+> cowcode)
+(obs=808)
+
+IW estimates for dynamic effects                Number of obs     =      1,345
+Absorbing 2 HDFE groups                         F( 121,     49)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.3108
+                                                Adj R-squared     =     0.1136
+                                                Root MSE          =     1.6127
+                               (Std. Err. adjusted for 50 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.2175584   .3815749    -0.57   0.571    -.9843619    .5492451
+          g0 |   .3687149   .9184553     0.40   0.690     -1.47699     2.21442
+          g2 |  -.1121746   .3286165    -0.34   0.734    -.7725541    .5482049
+          g4 |   .0735939   .3471926     0.21   0.833    -.6241157    .7713035
+          g6 |  -.5558121   .5291022    -1.05   0.299    -1.619083    .5074585
+          g8 |   .1265311   .3729583     0.34   0.736    -.6229566    .8760188
+         g10 |   .1698985   .6977281     0.24   0.809    -1.232239    1.572036
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.21755838   .36871492  -.11217463   .07359391  -.55581211   .12653108
+r1   .38157492   .07899454           .   .18332004           .   .07367011
+r2   .07899454   .91845527   .01966712   .07735903   .12342483           .
+r3           .   .01966712   .32861646           .   .18140388   .05253234
+r4   .18332004   .07735903           .   .34719256           .   .04359963
+r5           .   .12342483   .18140388           .   .52910215   .07481021
+r6   .07367011           .   .05253234   .04359963   .07481021   .37295828
+r7   .05162681   .09667765           .   .04666764   .05351514   .08025804
+
+           g10
+r1   .16989851
+r1   .05162681
+r2   .09667765
+r3           .
+r4   .04666764
+r5   .05351514
+r6   .08025804
+r7   .69772811
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table6.tex", fragment append
+(output written to tables/event_table6.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. ***
+. * Panel B with Event Study Design
+. *
+. * Percentage of transitions by "regular" means
+. ***
+. 
+. *** All serious attempts
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=1,896)
+
+IW estimates for dynamic effects                Number of obs     =      3,069
+Absorbing 2 HDFE groups                         F( 248,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2581
+                                                Adj R-squared     =     0.1252
+                                                Root MSE          =     0.3035
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0330954   .0521312    -0.63   0.527    -.1366951    .0705044
+          g0 |  -.0882445   .0332861    -2.65   0.010    -.1543937   -.0220953
+          g2 |  -.0497034   .0513405    -0.97   0.336    -.1517319    .0523251
+          g4 |   .0059458   .0558874     0.11   0.916    -.1051186    .1170102
+          g6 |   .1183733   .0604507     1.96   0.053    -.0017599    .2385064
+          g8 |  -.0147592   .0505721    -0.29   0.771    -.1152605    .0857422
+         g10 |   .0246071   .0532717     0.46   0.645    -.0812592    .1304733
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C, format(%9.3f)
+
+C[8,7]
+       g_2      g0      g2      g4      g6      g8     g10
+r1  -0.033  -0.088  -0.050   0.006   0.118  -0.015   0.025
+r1   0.052       .   0.022   0.014   0.013   0.012   0.013
+r2       .   0.033   0.011       .   0.006   0.005   0.010
+r3   0.022   0.011   0.051   0.021   0.022   0.008   0.013
+r4   0.014       .   0.021   0.056   0.015   0.021       .
+r5   0.013   0.006   0.022   0.015   0.060   0.004   0.019
+r6   0.012   0.005   0.008   0.021   0.004   0.051       .
+r7   0.013   0.010   0.013       .   0.019       .   0.053
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment replace
+(note: file tables/event_table7.tex not found)
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *** Tenure <= 10
+. preserve
+
+. keep if durgroup == 1
+(649 observations deleted)
+
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=1,506)
+
+IW estimates for dynamic effects                Number of obs     =      2,420
+Absorbing 2 HDFE groups                         F( 230,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2757
+                                                Adj R-squared     =     0.1115
+                                                Root MSE          =     0.3300
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |   .0052749   .0717486     0.07   0.942    -.1373103    .1478601
+          g0 |   -.139166   .0503344    -2.76   0.007     -.239195    -.039137
+          g2 |  -.0575133   .0558798    -1.03   0.306    -.1685628    .0535361
+          g4 |   .0049462   .0587433     0.08   0.933    -.1117937    .1216861
+          g6 |   .1219638   .0632299     1.93   0.057    -.0036924    .2476199
+          g8 |  -.0041552   .0521958    -0.08   0.937    -.1078835    .0995731
+         g10 |   .0331473   .0543324     0.61   0.543     -.074827    .1411216
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1   .00527488    -.139166  -.05751332   .00494621   .12196376   -.0041552
+r1   .07174858   .00533432   .02595532   .02237379   .00602614   .01517442
+r2   .00533432   .05033438   .01785999           .   .01170976           .
+r3   .02595532   .01785999   .05587985    .0211848   .02354767   .00988191
+r4   .02237379           .    .0211848   .05874325   .01536489   .01939394
+r5   .00602614   .01170976   .02354767   .01536489    .0632299   .00827292
+r6   .01517442           .   .00988191   .01939394   .00827292   .05219584
+r7           .   .01535542   .01489228           .   .02044674           .
+
+           g10
+r1   .03314732
+r1           .
+r2   .01535542
+r3   .01489228
+r4           .
+r5   .02044674
+r6           .
+r7   .05433242
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment append
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Tenure > 10
+. preserve
+
+. sort country year
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[_n-1]==2
+(969 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[_n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[_n+2]==2
+(78 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[_n+3]==2
+(104 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[_n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[_n+5]==2
+(78 real changes made)
+
+. 
+. keep if durgroup == 2
+(1,071 observations deleted)
+
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=1,227)
+
+IW estimates for dynamic effects                Number of obs     =      1,996
+Absorbing 2 HDFE groups                         F( 151,     57)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2060
+                                                Adj R-squared     =     0.0440
+                                                Root MSE          =     0.2447
+                               (Std. Err. adjusted for 58 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0614617   .0279443    -2.20   0.032    -.1174191   -.0055043
+          g0 |  -.0375594   .0344481    -1.09   0.280    -.1065405    .0314217
+          g2 |  -.0115804   .0651814    -0.18   0.860    -.1421039    .1189432
+          g4 |   .0270964   .0588718     0.46   0.647    -.0907923    .1449851
+          g6 |   .0786862   .0701765     1.12   0.267    -.0618399    .2192123
+          g8 |  -.0165163   .0490704    -0.34   0.738    -.1147782    .0817455
+         g10 |  -.1091109   .0308817    -3.53   0.001    -.1709504   -.0472714
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.06146171  -.03755939  -.01158035   .02709638   .07868624  -.01651635
+r1   .02794425   .00456424           .   .00692097           .   .00341571
+r2   .00456424   .03444808   .00842057           .           .   .00611719
+r3           .   .00842057   .06518141   .01356362   .01046734           .
+r4   .00692097           .   .01356362   .05887177   .03318569   .00689194
+r5           .           .   .01046734   .03318569   .07017654   .00803393
+r6   .00341571   .00611719           .   .00689194   .00803393   .04907041
+r7   .00962988           .           .   .00695108   .00589977   .00980639
+
+           g10
+r1  -.10911088
+r1   .00962988
+r2           .
+r3           .
+r4   .00695108
+r5   .00589977
+r6   .00980639
+r7    .0308817
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment append
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. ***
+. * AUTOCRATS
+. ***
+. 
+. *** All serious attempts on autocrats
+. preserve 
+
+. keep if lautoc == 1
+(1,228 observations deleted)
+
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=1,114)
+
+IW estimates for dynamic effects                Number of obs     =      1,841
+Absorbing 2 HDFE groups                         F( 173,     71)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2843
+                                                Adj R-squared     =     0.1023
+                                                Root MSE          =     0.2246
+                               (Std. Err. adjusted for 72 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0090982   .0519261    -0.18   0.861     -.112636    .0944396
+          g0 |  -.0440046   .0311898    -1.41   0.163    -.1061953    .0181862
+          g2 |   .0043965   .0643085     0.07   0.946    -.1238309    .1326239
+          g4 |  -.0434365   .0404863    -1.07   0.287     -.124164    .0372909
+          g6 |   .0206274   .0503253     0.41   0.683    -.0797184    .1209732
+          g8 |  -.0232259    .045321    -0.51   0.610    -.1135933    .0671415
+         g10 |   .0132854   .0578689     0.23   0.819     -.102102    .1286728
+------------------------------------------------------------------------------
+
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.00909821  -.04400456   .00439651  -.04343654    .0206274  -.02322588
+r1   .05192613   .00875741    .0109582   .01285907   .00212262           .
+r2   .00875741   .03118984   .00828222   .00843428           .           .
+r3    .0109582   .00828222   .06430846   .00936368   .00583535   .00673218
+r4   .01285907   .00843428   .00936368   .04048634   .00882318           .
+r5   .00212262           .   .00583535   .00882318   .05032529    .0135987
+r6           .           .   .00673218           .    .0135987   .04532096
+r7   .00271902   .00336879           .           .    .0071741   .00885304
+
+           g10
+r1    .0132854
+r1   .00271902
+r2   .00336879
+r3           .
+r4           .
+r5    .0071741
+r6   .00885304
+r7   .05786895
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment append
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrat with tenure <= 10
+. preserve 
+
+. keep if lautoc == 1 & durgroup == 1
+(1,746 observations deleted)
+
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=820)
+
+IW estimates for dynamic effects                Number of obs     =      1,323
+Absorbing 2 HDFE groups                         F( 152,     71)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.3359
+                                                Adj R-squared     =     0.0949
+                                                Root MSE          =     0.2550
+                               (Std. Err. adjusted for 72 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |    .054465   .0802506     0.68   0.500    -.1055503    .2144802
+          g0 |  -.0851297   .0570859    -1.49   0.140    -.1989557    .0286963
+          g2 |   .0107962   .0683072     0.16   0.875    -.1254044    .1469969
+          g4 |  -.0400487   .0477516    -0.84   0.404    -.1352627    .0551653
+          g6 |   .0197762   .0543158     0.36   0.717    -.0885264    .1280787
+          g8 |  -.0266494   .0482382    -0.55   0.582    -.1228336    .0695348
+         g10 |   .0124156   .0627385     0.20   0.844    -.1126815    .1375126
+------------------------------------------------------------------------------
+
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1   .05446496   -.0851297   .01079625  -.04004872   .01977619  -.02664941
+r1   .08025064   .01014998   .01005592           .   .00515953           .
+r2   .01014998   .05708586   .01096203           .           .           .
+r3   .01005592   .01096203   .06830717   .01573724   .01200293   .00932786
+r4           .           .   .01573724    .0477516   .01606949   .00930523
+r5   .00515953           .   .01200293   .01606949   .05431576   .01961259
+r6           .           .   .00932786   .00930523   .01961259   .04823819
+r7   .00808417   .00678391           .           .   .01350653   .01601079
+
+           g10
+r1   .01241556
+r1   .00808417
+r2   .00678391
+r3           .
+r4           .
+r5   .01350653
+r6   .01601079
+r7   .06273854
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment append
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. *** Autocrats with tenure > 10
+. preserve 
+
+. replace durgroup=durgroup[_n-1] if country==country[_n-1] & durgroup[_n-1]==2
+(959 real changes made)
+
+. replace durgroup=durgroup[_n+1] if country==country[_n+1] & durgroup[_n+1]==2
+(43 real changes made)
+
+. replace durgroup=durgroup[_n+2] if country==country[_n+2] & durgroup[_n+2]==2
+(76 real changes made)
+
+. replace durgroup=durgroup[_n+3] if country==country[_n+3] & durgroup[_n+3]==2
+(102 real changes made)
+
+. replace durgroup=durgroup[_n+4] if country==country[_n+4] & durgroup[_n+4]==2
+(108 real changes made)
+
+. replace durgroup=durgroup[_n+5] if country==country[_n+5] & durgroup[_n+5]==2
+(78 real changes made)
+
+. 
+. keep if lautoc == 1 & durgroup == 2
+(1,672 observations deleted)
+
+. eventstudyinteract exitregular g_2 g0 g2 g4 g6 g8 g10, cohort(first_success) cont
+> rol_cohort(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 
+> weapondum6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(clus
+> ter cowcode)
+(obs=839)
+
+IW estimates for dynamic effects                Number of obs     =      1,397
+Absorbing 2 HDFE groups                         F( 121,     49)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2857
+                                                Adj R-squared     =     0.0911
+                                                Root MSE          =     0.1822
+                               (Std. Err. adjusted for 50 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_2 |  -.0563617   .0328293    -1.72   0.092    -.1223346    .0096112
+          g0 |  -.0259271   .0330116    -0.79   0.436    -.0922664    .0404121
+          g2 |   .0198496   .0813694     0.24   0.808    -.1436683    .1833675
+          g4 |   .0018007   .0443552     0.04   0.968    -.0873344    .0909358
+          g6 |  -.0222147   .0216354    -1.03   0.310    -.0656927    .0212633
+          g8 |   .0302795   .0560776     0.54   0.592    -.0824127    .1429718
+         g10 |  -.0524811   .0292324    -1.80   0.079    -.1112259    .0062637
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+           g_2          g0          g2          g4          g6          g8
+r1  -.05636174  -.02592715   .01984963    .0018007  -.02221469   .03027953
+r1   .03282928           .   .00939363   .01086158   .01011917   .00948388
+r2           .   .03301156   .01781902    .0044631           .           .
+r3   .00939363   .01781902   .08136939   .01280204           .           .
+r4   .01086158    .0044631   .01280204    .0443552   .00542651   .00618423
+r5   .01011917           .           .   .00542651   .02163544   .00962981
+r6   .00948388           .           .   .00618423   .00962981   .05607764
+r7   .01014646   .00830352           .    .0093052   .00784498   .00628403
+
+           g10
+r1  -.05248112
+r1   .01014646
+r2   .00830352
+r3           .
+r4    .0093052
+r5   .00784498
+r6   .00628403
+r7   .02923243
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table7.tex", fragment append
+(output written to tables/event_table7.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. restore
+
+. 
+. 
+. ********************************************************************************
+. ***
+. *** ROBUSTNESS (Part I.1)
+. ***
+. 
+. * use 5 leads and 5 lags, with controls as before 
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) control_cohort(ne
+> ver_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 nu
+> mserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 343,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1774
+                                                Adj R-squared     =    -0.0233
+                                                Root MSE          =     1.9317
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_5 |  -.2398417    .299149    -0.80   0.425    -.8343375    .3546541
+         g_4 |  -.0643995   .1053823    -0.61   0.543    -.2738246    .1450256
+         g_3 |   .1973479   .2710553     0.73   0.469    -.3413176    .7360133
+         g_2 |  -.0847094   .2499783    -0.34   0.736    -.5814887    .4120699
+          g0 |   .0527998   .5820261     0.09   0.928    -1.103855    1.209454
+          g1 |  -.1392969    .311557    -0.45   0.656    -.7584511    .4798572
+          g2 |  -.5367977   .3912535    -1.37   0.174    -1.314332    .2407363
+          g3 |   .2194486   .1902191     1.15   0.252    -.1585719    .5974691
+          g4 |   -.152681   .4186157    -0.36   0.716    -.9845917    .6792298
+          g5 |   .1930181   .1796034     1.07   0.285     -.163906    .5499422
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0          g1
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982  -.13929692
+ r1   .29914903   .01774129   .04980729           .           .           .
+ r2   .01774129   .10538225   .02018336           .   .04302679           .
+ r3   .04980729   .02018336    .2710553    .1070072           .           .
+ r4           .           .    .1070072   .24997829           .           .
+ r5           .   .04302679           .           .   .58202613   .04558852
+ r6           .           .           .           .   .04558852   .31155703
+ r7           .           .   .03353732   .03762982   .10950031           .
+ r8           .   .00186473           .           .   .05347398    .0668313
+ r9   .13110142           .   .05375711   .11260503           .           .
+r10           .   .02864957   .10316653   .10405715    .0706929           .
+
+             g2          g3          g4          g5
+ r1  -.53679773   .21944861  -.15268097   .19301806
+ r1           .           .   .13110142           .
+ r2           .   .00186473           .   .02864957
+ r3   .03353732           .   .05375711   .10316653
+ r4   .03762982           .   .11260503   .10405715
+ r5   .10950031   .05347398           .    .0706929
+ r6           .    .0668313           .           .
+ r7   .39125348   .02876789           .   .07566701
+ r8   .02876789    .1902191           .    .0907165
+ r9           .           .   .41861569    .0318071
+r10   .07566701    .0907165    .0318071   .17960344
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table8.tex", fragment replace
+(note: file tables/event_table8.tex not found)
+(output written to tables/event_table8.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *only leads
+. eventstudyinteract difpol2 g0-g10, cohort(first_success) control_cohort(never_suc
+> cess) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 numserdum
+> 2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 374,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1994
+                                                Adj R-squared     =    -0.0096
+                                                Root MSE          =     1.9188
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+          g0 |  -.0004336   .5819013    -0.00   0.999     -1.15684    1.155973
+          g1 |  -.1645093   .3120953    -0.53   0.599    -.7847331    .4557146
+          g2 |  -.5458112   .3974167    -1.37   0.173    -1.335593    .2439709
+          g3 |   .1899292   .1981005     0.96   0.340    -.2037539    .5836123
+          g4 |  -.1524934   .4206264    -0.36   0.718       -.9884    .6834132
+          g5 |   .1584276   .1815239     0.87   0.385     -.202313    .5191681
+          g6 |  -.2956302   .2473107    -1.20   0.235    -.7871082    .1958478
+          g7 |  -.3045078   .4299819    -0.71   0.481    -1.159006    .5499908
+          g8 |   .2952261   .2993375     0.99   0.327    -.2996442    .8900965
+          g9 |   .0385332   .1655466     0.23   0.816    -.2904558    .3675223
+         g10 |   .1217189   .3086886     0.39   0.694    -.4917348    .7351727
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[12,11]
+             g0          g1          g2          g3          g4          g5
+ r1  -.00043361  -.16450928  -.54581118   .18992919  -.15249342   .15842756
+ r1   .58190135   .08907549   .12324971   .06587226           .   .08582782
+ r2   .08907549   .31209532   .06029084   .09252703           .           .
+ r3   .12324971   .06029084   .39741667   .07926676           .    .0978456
+ r4   .06587226   .09252703   .07926676   .19810051           .   .09642144
+ r5           .           .           .           .    .4206264           .
+ r6   .08582782           .    .0978456   .09642144           .   .18152385
+ r7           .           .   .11944663    .0338814           .   .12430773
+ r8   .19134998   .14579777           .   .02407504           .           .
+ r9           .           .   .04806535           .           .   .03881107
+r10   .07822491           .   .07130406           .           .   .03974081
+r11    .1115958    .0694656   .10507958           .           .   .04152121
+
+             g6          g7          g8          g9         g10
+ r1  -.29563019  -.30450784   .29522615   .03853323   .12171895
+ r1           .   .19134998           .   .07822491    .1115958
+ r2           .   .14579777           .           .    .0694656
+ r3   .11944663           .   .04806535   .07130406   .10507958
+ r4    .0338814   .02407504           .           .           .
+ r5           .           .           .           .           .
+ r6   .12430773           .   .03881107   .03974081   .04152121
+ r7   .24731067           .   .06607852   .01827478   .00911932
+ r8           .   .42998189    .0185404    .0713042   .07162709
+ r9   .06607852    .0185404   .29933748   .04607825   .03812129
+r10   .01827478    .0713042   .04607825   .16554657   .07066012
+r11   .00911932   .07162709   .03812129   .07066012    .3086886
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. ***
+. *** ROBUSTNESS (Part I.2)
+. ***
+. 
+. *** use CHGPOL2 - as dummy
+. * use 5 leads and 5 lags as before (now with covariates)
+. eventstudyinteract chgpol2 g_5-g_2 g0-g5, cohort(first_success) control_cohort(ne
+> ver_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 nu
+> mserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowcode)
+(obs=1,896)
+
+IW estimates for dynamic effects                Number of obs     =      3,069
+Absorbing 2 HDFE groups                         F( 354,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2216
+                                                Adj R-squared     =     0.0433
+                                                Root MSE          =     0.3063
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     chgpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_5 |  -.0109976   .0435546    -0.25   0.801    -.0975531     .075558
+         g_4 |  -.0194166   .0188549    -1.03   0.306    -.0568868    .0180535
+         g_3 |  -.0367232   .0597509    -0.61   0.540    -.1554656    .0820192
+         g_2 |   .0070644   .0629912     0.11   0.911    -.1181173    .1322461
+          g0 |   .0293533   .0871891     0.34   0.737    -.1439168    .2026233
+          g1 |   .0061609    .053365     0.12   0.908    -.0998908    .1122126
+          g2 |  -.0775772   .0625081    -1.24   0.218    -.2017989    .0466445
+          g3 |   .0528784   .0504792     1.05   0.298    -.0474383    .1531951
+          g4 |  -.0324847   .0652091    -0.50   0.620    -.1620741    .0971046
+          g5 |   .0619866   .0468901     1.32   0.190    -.0311976    .1551707
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0          g1
+ r1  -.01099755  -.01941662  -.03672318    .0070644   .02935325    .0061609
+ r1   .04355458           .   .00646222           .           .           .
+ r2           .    .0188549   .00653295   .00811247   .00679094   .00862313
+ r3   .00646222   .00653295   .05975093   .01840477   .02313925           .
+ r4           .   .00811247   .01840477   .06299118   .01297703           .
+ r5           .   .00679094   .02313925   .01297703   .08718911   .01460716
+ r6           .   .00862313           .           .   .01460716     .053365
+ r7           .           .           .           .           .   .00655234
+ r8           .   .00466243    .0061726           .   .01741703   .02180798
+ r9           .   .00536016   .00591204   .02356944   .01128434   .00493576
+r10           .   .00871079   .01874122   .02425413   .02073781           .
+
+             g2          g3          g4          g5
+ r1  -.07757718    .0528784  -.03248472   .06198656
+ r1           .           .           .           .
+ r2           .   .00466243   .00536016   .00871079
+ r3           .    .0061726   .00591204   .01874122
+ r4           .           .   .02356944   .02425413
+ r5           .   .01741703   .01128434   .02073781
+ r6   .00655234   .02180798   .00493576           .
+ r7   .06250809   .00746055           .   .00802847
+ r8   .00746055   .05047916   .00964372   .02109398
+ r9           .   .00964372   .06520908   .02117839
+r10   .00802847   .02109398   .02117839   .04689006
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table8.tex", fragment append
+(output written to tables/event_table8.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. *only leads
+. eventstudyinteract chgpol2 g0-g10, cohort(first_success) control_cohort(never_suc
+> cess) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 numserdum
+> 2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowcode)
+(obs=1,896)
+
+IW estimates for dynamic effects                Number of obs     =      3,069
+Absorbing 2 HDFE groups                         F( 386,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2187
+                                                Adj R-squared     =     0.0272
+                                                Root MSE          =     0.3089
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     chgpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+          g0 |   .0366257   .0867457     0.42   0.674    -.1357632    .2090145
+          g1 |    .005672   .0529057     0.11   0.915    -.0994669    .1108109
+          g2 |  -.0683863   .0632122    -1.08   0.282    -.1940073    .0572347
+          g3 |    .054552   .0499796     1.09   0.278     -.044772    .1538761
+          g4 |  -.0219549   .0636442    -0.34   0.731    -.1484344    .1045246
+          g5 |   .0677486   .0475313     1.43   0.158    -.0267098     .162207
+          g6 |    -.02385   .0379321    -0.63   0.531    -.0992321    .0515321
+          g7 |   .0131759   .0570473     0.23   0.818    -.1001936    .1265455
+          g8 |   .0463092   .0400443     1.16   0.251    -.0332704    .1258887
+          g9 |   .0034714   .0473811     0.07   0.942    -.0906885    .0976313
+         g10 |   -.029327    .045454    -0.65   0.520    -.1196573    .0610032
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[12,11]
+             g0          g1          g2          g3          g4          g5
+ r1   .03662568   .00567203  -.06838634   .05455204  -.02195488   .06774863
+ r1   .08674571   .01372807           .   .01545537   .00896225   .02106658
+ r2   .01372807   .05290567   .01265003   .02095695           .           .
+ r3           .   .01265003   .06321222   .01194662           .   .01213695
+ r4   .01545537   .02095695   .01194662   .04997963   .00628295   .02006277
+ r5   .00896225           .           .   .00628295   .06364422   .02029769
+ r6   .02106658           .   .01213695   .02006277   .02029769   .04753127
+ r7   .01230327           .   .02069352   .00898169           .   .02118603
+ r8   .01529555   .02332507           .           .   .01885338           .
+ r9           .   .00842105   .00732229           .           .           .
+r10   .01400276    .0069644   .02573342           .           .   .00546085
+r11   .01652218   .00657214   .01874083           .           .           .
+
+             g6          g7          g8          g9         g10
+ r1  -.02385003   .01317593   .04630917   .00347141  -.02932704
+ r1   .01230327   .01529555           .   .01400276   .01652218
+ r2           .   .02332507   .00842105    .0069644   .00657214
+ r3   .02069352           .   .00732229   .02573342   .01874083
+ r4   .00898169           .           .           .           .
+ r5           .   .01885338           .           .           .
+ r6   .02118603           .           .   .00546085           .
+ r7   .03793211           .   .00406352   .02097442   .00445914
+ r8           .   .05704731   .01358514           .   .01014043
+ r9   .00406352   .01358514   .04004426   .00956756   .00657867
+r10   .02097442           .   .00956756   .04738107   .02139593
+r11   .00445914   .01014043   .00657867   .02139593   .04545399
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. ********************************************************************************
+. 
+. ***
+. * RESIDUAL DIAGNOSTICS
+. ***
+. 
+. * see if there is a pattern in the residuals...
+. *directional change
+. *reg chgpol2 weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 numserdum2 nu
+> mserdum3 numserdum4 i.countrynum i.year, vce(cluster cowcode)
+. *predict res_chg, res
+. *predict fit_chg, xb 
+. *twoway (scatter res_chg fit_chg)
+. *twoway (scatter res_chg panel_success)
+. 
+. *continuous change variable
+. *reg difpol2 weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 numserdum2 nu
+> mserdum3 numserdum4 i.countrynum i.year, vce(cluster cowcode)
+. *predict res_dif, res
+. *predict fit_dif, xb
+. *twoway (scatter res_dif fit_dif)
+. *twoway (scatter res_dif panel_success)
+. 
+. *further diagnostics plots
+. *rvfplot
+. 
+. 
+. ********************************************************************************
+. *** ROBUSTNESS (Part II)
+. 
+. *different clustering 
+. 
+. *use robust
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) control_cohort(ne
+> ver_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 nu
+> mserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(robust)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 343,   2296)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1774
+                                                Adj R-squared     =    -0.0228
+                                                Root MSE          =     1.9313
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_5 |  -.2398417   .3055916    -0.78   0.433    -.8391061    .3594227
+         g_4 |  -.0643995   .1247188    -0.52   0.606    -.3089729    .1801738
+         g_3 |   .1973479   .2749212     0.72   0.473    -.3417719    .7364677
+         g_2 |  -.0847094    .252932    -0.33   0.738    -.5807084    .4112896
+          g0 |   .0527998   .6027757     0.09   0.930    -1.129242    1.234842
+          g1 |  -.1392969   .3134328    -0.44   0.657    -.7539379     .475344
+          g2 |  -.5367977   .3975897    -1.35   0.177     -1.31647    .2428748
+          g3 |   .2194486   .1906571     1.15   0.250    -.1544296    .5933268
+          g4 |   -.152681   .4125503    -0.37   0.711    -.9616912    .6563292
+          g5 |   .1930181   .1704463     1.13   0.258    -.1412267    .5272628
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0          g1
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982  -.13929692
+ r1   .30559158   .05304158   .06467295   .06123008   .06650748   .07650643
+ r2   .05304158   .12471882   .05412671   .05977612   .02969318   .04241026
+ r3   .06467295   .05412671   .27492118   .06661143   .06172307   .05424707
+ r4   .06123008   .05977612   .06661143   .25293195   .07011507   .05623825
+ r5   .06650748   .02969318   .06172307   .07011507   .60277567   .06784412
+ r6   .07650643   .04241026   .05424707   .05623825   .06784412   .31343277
+ r7   .05320478   .04233379   .04073791   .08646571   .05523564   .05613259
+ r8   .03949911   .04918006   .04341204   .04348711           .   .05412137
+ r9   .03579255   .02849632   .05257592   .09706817   .09123781   .04938709
+r10   .03979864   .04293024   .04230492   .07853337   .05579109   .04347079
+
+             g2          g3          g4          g5
+ r1  -.53679773   .21944861  -.15268097   .19301806
+ r1   .05320478   .03949911   .03579255   .03979864
+ r2   .04233379   .04918006   .02849632   .04293024
+ r3   .04073791   .04341204   .05257592   .04230492
+ r4   .08646571   .04348711   .09706817   .07853337
+ r5   .05523564           .   .09123781   .05579109
+ r6   .05613259   .05412137   .04938709   .04347079
+ r7   .39758972   .05498857   .07711004   .05110695
+ r8   .05498857   .19065713   .05964971   .06076076
+ r9   .07711004   .05964971   .41255029   .07010025
+r10   .05110695   .06076076   .07010025   .17044627
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table8.tex", fragment append
+(output written to tables/event_table8.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+
+. 
+. 
+. * use region
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) control_cohort(ne
+> ver_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 nu
+> mserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster region)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 343,      9)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1774
+                                                Adj R-squared     =    -0.0233
+                                                Root MSE          =     1.9317
+                                (Std. Err. adjusted for 10 clusters in region)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_5 |  -.2398417   .2775342    -0.86   0.410    -.8676676    .3879842
+         g_4 |  -.0643995   .1277958    -0.50   0.626    -.3534938    .2246947
+         g_3 |   .1973479   .2838585     0.70   0.504    -.4447847    .8394805
+         g_2 |  -.0847094   .2408109    -0.35   0.733    -.6294615    .4600427
+          g0 |   .0527998   .5860777     0.09   0.930       -1.273      1.3786
+          g1 |  -.1392969   .3237387    -0.43   0.677    -.8716448     .593051
+          g2 |  -.5367977   .3738906    -1.44   0.185    -1.382597    .3090015
+          g3 |   .2194486   .1861593     1.18   0.269    -.2016729    .6405701
+          g4 |   -.152681   .4753698    -0.32   0.755    -1.228042    .9226801
+          g5 |   .1930181   .1629372     1.18   0.267    -.1755714    .5616075
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0          g1
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982  -.13929692
+ r1   .27753418   .04146903   .07205236   .10252585           .           .
+ r2   .04146903   .12779584   .02956988           .   .10416955   .06562638
+ r3   .07205236   .02956988   .28385854   .14840105           .           .
+ r4   .10252585           .   .14840105   .24081088           .           .
+ r5           .   .10416955           .           .   .58607774   .13140216
+ r6           .   .06562638           .           .   .13140216   .32373872
+ r7           .   .11474362    .0823117   .03049891   .17408773   .06678456
+ r8           .           .           .           .   .06337321   .03070548
+ r9   .22321581           .           .   .11170649           .           .
+r10   .05983443   .07762692   .12614928     .126387   .07118464           .
+
+             g2          g3          g4          g5
+ r1  -.53679773   .21944861  -.15268097   .19301806
+ r1           .           .   .22321581   .05983443
+ r2   .11474362           .           .   .07762692
+ r3    .0823117           .           .   .12614928
+ r4   .03049891           .   .11170649     .126387
+ r5   .17408773   .06337321           .   .07118464
+ r6   .06678456   .03070548           .           .
+ r7   .37389058           .           .   .10614796
+ r8           .   .18615926           .           .
+ r9           .           .   .47536975           .
+r10   .10614796           .           .   .16293716
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table8.tex", fragment append
+(output written to tables/event_table8.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. * use region
+. eventstudyinteract difpol2 g_5-g_2 g0-g5, cohort(first_success) control_cohort(ne
+> ver_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 nu
+> mserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster year)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 343,    128)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1774
+                                                Adj R-squared     =    -0.0233
+                                                Root MSE          =     1.9317
+                                 (Std. Err. adjusted for 129 clusters in year)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         g_5 |  -.2398417   .2039934    -1.18   0.242    -.6434776    .1637942
+         g_4 |  -.0643995   .0982977    -0.66   0.514    -.2588983    .1300992
+         g_3 |   .1973479   .2366236     0.83   0.406    -.2708523     .665548
+         g_2 |  -.0847094   .1917094    -0.44   0.659    -.4640391    .2946203
+          g0 |   .0527998   .5630484     0.09   0.925    -1.061288    1.166887
+          g1 |  -.1392969   .2343798    -0.59   0.553    -.6030575    .3244636
+          g2 |  -.5367977   .3421244    -1.57   0.119    -1.213749    .1401538
+          g3 |   .2194486   .1490372     1.47   0.143    -.0754471    .5143443
+          g4 |   -.152681   .3252333    -0.47   0.640    -.7962106    .4908486
+          g5 |   .1930181    .108137     1.78   0.077    -.0209495    .4069856
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[11,10]
+            g_5         g_4         g_3         g_2          g0          g1
+ r1   -.2398417  -.06439953   .19734788   -.0847094   .05279982  -.13929692
+ r1   .20399344   .05792233    .0556989   .05479676   .04424004   .05092188
+ r2   .05792233   .09829768    .0567796   .05440309   .02404911   .04816166
+ r3    .0556989    .0567796   .23662356   .05595945           .   .04661478
+ r4   .05479676   .05440309   .05595945   .19170936   .02847575   .04909915
+ r5   .04424004   .02404911           .   .02847575    .5630484   .05465846
+ r6   .05092188   .04816166   .04661478   .04909915   .05465846   .23437983
+ r7   .04343729   .04220464   .04325402   .04478536   .04009049   .04280724
+ r8   .04216143   .04321882   .04380311   .04352743   .01315034   .03889015
+ r9    .0403201   .04050288    .0435789   .04423409   .02973662    .0349529
+r10   .03815073   .03926155   .04122037   .04108802           .   .03453915
+
+             g2          g3          g4          g5
+ r1  -.53679773   .21944861  -.15268097   .19301806
+ r1   .04343729   .04216143    .0403201   .03815073
+ r2   .04220464   .04321882   .04050288   .03926155
+ r3   .04325402   .04380311    .0435789   .04122037
+ r4   .04478536   .04352743   .04423409   .04108802
+ r5   .04009049   .01315034   .02973662           .
+ r6   .04280724   .03889015    .0349529   .03453915
+ r7   .34212438   .04376193   .04506322   .04225346
+ r8   .04376193   .14903725   .04555922   .04393566
+ r9   .04506322   .04555922   .32523328   .04668436
+r10   .04225346   .04393566   .04668436   .10813703
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/event_table8.tex", fragment append
+(output written to tables/event_table8.tex)
+
+. 
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+
+. 
+. 
+. ********************************************************************************
+. *** ROBUSTNESS (Part III)
+. 
+. *pre-treatment effects seem relatively constant, which might suggest binning the 
+> many leads.  TODO: current
+. *implementation of bins does not follow Sun and Abraham (2020) exactly due to cod
+> ing challenge.  But it is
+. *valid if effects in the bin are constant for each cohort.
+. gen g_l5 = relative_year <= -5
+
+. 
+. eventstudyinteract difpol2 g_l5 g0-g5, cohort(first_success) control_cohort(never
+> _success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum6 numse
+> rdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowcode)
+(obs=1,772)
+
+IW estimates for dynamic effects                Number of obs     =      2,856
+Absorbing 2 HDFE groups                         F( 244,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1631
+                                                Adj R-squared     =     0.0019
+                                                Root MSE          =     1.9077
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+     difpol2 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        g_l5 |  -.0750255   .0909416    -0.82   0.412    -.2557529    .1057019
+          g0 |   .0321745    .579846     0.06   0.956    -1.120148    1.184497
+          g1 |  -.1385924    .326339    -0.42   0.672    -.7871226    .5099379
+          g2 |   -.527226   .3939078    -1.34   0.184    -1.310035    .2555829
+          g3 |   .2042965   .1844509     1.11   0.271    -.1622609     .570854
+          g4 |  -.1411811   .4221943    -0.33   0.739    -.9802035    .6978412
+          g5 |   .1536384   .1716887     0.89   0.373    -.1875567    .4948336
+------------------------------------------------------------------------------
+
+. 
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[8,7]
+          g_l5          g0          g1          g2          g3          g4
+r1  -.07502549   .03217447  -.13859235  -.52722601   .20429655  -.14118112
+r1   .09094164   .02417078   .12550715   .05225361   .03428126   .05234565
+r2   .02417078   .57984604   .10266931   .11254608   .04216778           .
+r3   .12550715   .10266931   .32633903   .08110608   .09752744           .
+r4   .05225361   .11254608   .08110608   .39390777   .05604112   .00422045
+r5   .03428126   .04216778   .09752744   .05604112   .18445094           .
+r6   .05234565           .           .   .00422045           .   .42219426
+r7           .   .04274459           .   .07166586   .07470253    .0368152
+
+            g5
+r1   .15363844
+r1           .
+r2   .04274459
+r3           .
+r4   .07166586
+r5   .07470253
+r6    .0368152
+r7   .17168866
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+(C: CI1 missing for some coefficients)
+
+. 
+. 
+. ***
+. * look at 1-10 years...
+. ***
+. 
+. *only for exitregular, difpol2 and chgpol2 not sign.!
+. 
+. preserve
+
+. gen g_l10 = relative_year <= -10
+
+. gen g10x = (relative_year <= 10 & relative_year >= 1)
+
+. eventstudyinteract exitregular g_l10 g0 g10x, cohort(first_success) control_cohor
+> t(never_success) covariates(weapondum2 weapondum3 weapondum4 weapondum5 weapondum
+> 6 numserdum2 numserdum3 numserdum4) absorb(i.countrynum i.year) vce(cluster cowco
+> de)
+(obs=1,896)
+
+IW estimates for dynamic effects                Number of obs     =      3,069
+Absorbing 2 HDFE groups                         F( 110,     88)   =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2241
+                                                Adj R-squared     =     0.1312
+                                                Root MSE          =     0.3025
+                               (Std. Err. adjusted for 89 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+ exitregular |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       g_l10 |    -.01253   .0214444    -0.58   0.561    -.0551462    .0300863
+          g0 |  -.0734662   .0305502    -2.40   0.018    -.1341782   -.0127541
+        g10x |   .0295111   .0155185     1.90   0.060    -.0013286    .0603507
+------------------------------------------------------------------------------
+
+. matrix C = e(b_iw)
+
+. mata st_matrix("A",sqrt(st_matrix("e(V_iw)")))
+
+. matrix C = C \ A
+
+. matrix list C
+
+C[4,3]
+         g_l10          g0        g10x
+r1  -.01252995  -.07346615   .02951105
+r1   .02144439   .01055502   .00809046
+r2   .01055502   .03055019   .01010462
+r3   .00809046   .01010462   .01551845
+
+. coefplot matrix(C[1]), se(C[2]) vertical drop(_cons weapondum2 weapondum3 weapond
+> um4 weapondum5 weapondum6 numserdum2 numserdum3 numserdum4)
+
+. restore
+
+. 
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. **************
+. * END
+. **************
+. 
+end of do-file
+
+. do "programs/matching.do"
+
+. 
+. *******************************************************************
+. * Subject: Empirical Political Economy
+. * Authors: Philipp, Niccolo, Ramzi, Marton & Adam
+. * Project: "Hit or Miss"
+. *******************************************************************
+. 
+. 
+. version 9.2
+
+. clear
+
+. set mem 300m
+
+. set more off
+
+. 
+. local fixedeffectvars = "weapondum* numserdum* "                
+
+. 
+. use "data/country_year_data.dta", clear
+
+. 
+. ********************************************************************************
+. 
+. 
+. ***
+. * old code from data
+. ***
+. 
+. tsset
+       panel variable:  countrynum (unbalanced)
+        time variable:  year, 1875 to 2004, but with gaps
+                delta:  1 unit
+
+. g anywarl1l3 = l.zGledAnywar - l3.zGledAnywar
+(1,083 missing values generated)
+
+. g npolity2l1l3 = l.npolity2 - l3.npolity2
+(1,578 missing values generated)
+
+. g lnenergy_pc = ln(energy) - ln(tpop)
+(2,658 missing values generated)
+
+. g lnpop = ln(tpop)
+(1,710 missing values generated)
+
+. 
+. g pol2dum = 0 if polity2<=0 & polity2!=. 
+(5,944 missing values generated)
+
+. replace pol2dum = 1 if polity2>0 & polity2!=. 
+(4,944 real changes made)
+
+. g lpol2dum = l.pol2dum
+(1,170 missing values generated)
+
+. g pol2duml1l3 = l.pol2dum - l3.pol2dum
+(1,578 missing values generated)
+
+. for var npolity2 zGledAnywar lnenergy_pc lnpop age : g lX = l.X
+
+->  g lnpolity2 = l.npolity2
+(1,170 missing values generated)
+
+->  g lzGledAnywar = l.zGledAnywar
+(670 missing values generated)
+
+->  g llnenergy_pc = l.lnenergy_pc
+(2,677 missing values generated)
+
+->  g llnpop = l.lnpop
+(1,734 missing values generated)
+
+->  g lage = l.age
+(322 missing values generated)
+
+. 
+. foreach X of var prioanywar prioanywarP zGledAnywar zGledAnywarP {
+  2.         g `X'11 = f.`X' - l.`X'
+  3.         
+. }
+(4,692 missing values generated)
+(5,158 missing values generated)
+(1,055 missing values generated)
+(5,158 missing values generated)
+
+. 
+. 
+. **************************************
+. *** Table 9: Propensity score
+. **************************************
+. 
+. g failure = (seriousattempt == 1 & success == 0) if seriousattempt != . & success
+>  != .
+
+.         
+. capture drop lanywar
+
+. g lanywar = l.zGledAnywar
+(670 missing values generated)
+
+. g ltenure = l.clock
+(208 missing values generated)
+
+. *label var lnpolity2 "Polity score"
+. *label var ltenure "Tenure"
+. *label var lanywar "At war"
+. *label var llnenergy_pc "Ln energy use p.c."
+. *label var llnpop "Population"
+. 
+. 
+. dprobit seriousattempt lpol2dum , cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood = -1105.2207
+Iteration 1:   log pseudolikelihood = -1102.2204
+Iteration 2:   log pseudolikelihood = -1102.2127
+Iteration 3:   log pseudolikelihood = -1102.2127
+
+Probit regression, reporting marginal effects           Number of obs =  11171
+                                                        Wald chi2(1)  =   3.02
+                                                        Prob > chi2   = 0.0822
+Log pseudolikelihood = -1102.2127                       Pseudo R2     = 0.0027
+
+                              (Std. Err. adjusted for 171 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+lpol2dum*|  -.0065322   .0036195    -1.74   0.082   .433265  -.013626  .000562
+---------+--------------------------------------------------------------------
+  obs. P |    .020231
+ pred. P |   .0200035  (at x-bar)
+------------------------------------------------------------------------------
+(*) dF/dx is for discrete change of dummy variable from 0 to 1
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  lpol2dum = 0
+
+           chi2(  1) =    3.02
+         Prob > chi2 =    0.0822
+
+. outreg2 using "tables/table_9.tex", coefastr se replace title("Predicting attempt
+> s") bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt pol2duml1l3 , cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood = -1061.9596
+Iteration 1:   log pseudolikelihood = -1060.0388
+Iteration 2:   log pseudolikelihood = -1060.0362
+
+Probit regression, reporting marginal effects           Number of obs =  10763
+                                                        Wald chi2(1)  =   3.19
+                                                        Prob > chi2   = 0.0740
+Log pseudolikelihood = -1060.0362                       Pseudo R2     = 0.0018
+
+                              (Std. Err. adjusted for 170 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+pol2du~3 |  -.0124576   .0069937    -1.79   0.074   .004924  -.026165   .00125
+---------+--------------------------------------------------------------------
+  obs. P |   .0201617
+ pred. P |   .0200197  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  pol2duml1l3 = 0
+
+           chi2(  1) =    3.19
+         Prob > chi2 =    0.0740
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt lanywar , cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood = -1123.0561
+Iteration 1:   log pseudolikelihood = -1102.4008
+Iteration 2:   log pseudolikelihood = -1101.2153
+Iteration 3:   log pseudolikelihood = -1101.2132
+
+Probit regression, reporting marginal effects           Number of obs =  11671
+                                                        Wald chi2(1)  =  41.03
+                                                        Prob > chi2   = 0.0000
+Log pseudolikelihood = -1101.2132                       Pseudo R2     = 0.0194
+
+                              (Std. Err. adjusted for 187 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+ lanywar*|   .0278851   .0059376     6.41   0.000   .135464   .016248  .039523
+---------+--------------------------------------------------------------------
+  obs. P |   .0195356
+ pred. P |   .0182727  (at x-bar)
+------------------------------------------------------------------------------
+(*) dF/dx is for discrete change of dummy variable from 0 to 1
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  lanywar = 0
+
+           chi2(  1) =   41.03
+         Prob > chi2 =    0.0000
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt anywarl1l3 , cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood = -1087.4949
+Iteration 1:   log pseudolikelihood = -1086.8905
+Iteration 2:   log pseudolikelihood = -1086.8903
+
+Probit regression, reporting marginal effects           Number of obs =  11258
+                                                        Wald chi2(1)  =   0.53
+                                                        Prob > chi2   = 0.4684
+Log pseudolikelihood = -1086.8903                       Pseudo R2     = 0.0006
+
+                              (Std. Err. adjusted for 184 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+anywar~3 |   .0043081   .0059152     0.73   0.468  -.001777  -.007285  .015902
+---------+--------------------------------------------------------------------
+  obs. P |   .0196305
+ pred. P |   .0195909  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  anywarl1l3 = 0
+
+           chi2(  1) =    0.53
+         Prob > chi2 =    0.4684
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt llnenergy_pc , cluster(cowcode) 
+
+Iteration 0:   log pseudolikelihood = -985.03308
+Iteration 1:   log pseudolikelihood = -974.81564
+Iteration 2:   log pseudolikelihood = -974.67855
+Iteration 3:   log pseudolikelihood = -974.67853
+
+Probit regression, reporting marginal effects           Number of obs =   9664
+                                                        Wald chi2(1)  =  12.90
+                                                        Prob > chi2   = 0.0003
+Log pseudolikelihood = -974.67853                       Pseudo R2     = 0.0105
+
+                              (Std. Err. adjusted for 178 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+llnene~c |  -.0026769   .0007116    -3.59   0.000  -.913354  -.004072 -.001282
+---------+--------------------------------------------------------------------
+  obs. P |   .0210058
+ pred. P |   .0201771  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  llnenergy_pc = 0
+
+           chi2(  1) =   12.90
+         Prob > chi2 =    0.0003
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt llnpop, cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood =  -1081.887
+Iteration 1:   log pseudolikelihood = -1066.6156
+Iteration 2:   log pseudolikelihood = -1066.4435
+Iteration 3:   log pseudolikelihood = -1066.4435
+
+Probit regression, reporting marginal effects           Number of obs =  10607
+                                                        Wald chi2(1)  =  20.82
+                                                        Prob > chi2   = 0.0000
+Log pseudolikelihood = -1066.4435                       Pseudo R2     = 0.0143
+
+                              (Std. Err. adjusted for 179 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+  llnpop |   .0045382   .0009707     4.56   0.000   8.81708   .002636  .006441
+---------+--------------------------------------------------------------------
+  obs. P |   .0210239
+ pred. P |   .0198481  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  llnpop = 0
+
+           chi2(  1) =   20.82
+         Prob > chi2 =    0.0000
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt lage, cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood =  -1137.703
+Iteration 1:   log pseudolikelihood = -1135.4284
+Iteration 2:   log pseudolikelihood = -1135.4244
+
+Probit regression, reporting marginal effects           Number of obs =  12019
+                                                        Wald chi2(1)  =   3.06
+                                                        Prob > chi2   = 0.0805
+Log pseudolikelihood = -1135.4244                       Pseudo R2     = 0.0020
+
+                              (Std. Err. adjusted for 185 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+    lage |  -.0002218   .0001239    -1.75   0.080   55.4325  -.000465  .000021
+---------+--------------------------------------------------------------------
+  obs. P |   .0191364
+ pred. P |   .0189787  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  lage = 0
+
+           chi2(  1) =    3.06
+         Prob > chi2 =    0.0805
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt ltenure, cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood = -1143.8395
+Iteration 1:   log pseudolikelihood =  -1143.585
+Iteration 2:   log pseudolikelihood = -1143.5848
+
+Probit regression, reporting marginal effects           Number of obs =  12133
+                                                        Wald chi2(1)  =   0.27
+                                                        Prob > chi2   = 0.6037
+Log pseudolikelihood = -1143.5848                       Pseudo R2     = 0.0002
+
+                              (Std. Err. adjusted for 187 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+ ltenure |  -.0001066   .0002044    -0.52   0.604   8.26028  -.000507  .000294
+---------+--------------------------------------------------------------------
+  obs. P |    .019039
+ pred. P |   .0190209  (at x-bar)
+------------------------------------------------------------------------------
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  ltenure = 0
+
+           chi2(  1) =    0.27
+         Prob > chi2 =    0.6037
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. dprobit seriousattempt lpol2dum pol2duml1l3 lanywar anywarl1l3 llnenergy_pc llnpo
+> p lage ltenure , cluster(cowcode)
+
+Iteration 0:   log pseudolikelihood =  -930.3852
+Iteration 1:   log pseudolikelihood = -889.12496
+Iteration 2:   log pseudolikelihood = -887.19515
+Iteration 3:   log pseudolikelihood =  -887.1913
+Iteration 4:   log pseudolikelihood =  -887.1913
+
+Probit regression, reporting marginal effects           Number of obs =   8904
+                                                        Wald chi2(8)  =  83.99
+                                                        Prob > chi2   = 0.0000
+Log pseudolikelihood =  -887.1913                       Pseudo R2     = 0.0464
+
+                              (Std. Err. adjusted for 166 clusters in cowcode)
+------------------------------------------------------------------------------
+         |               Robust
+serio~pt |      dF/dx   Std. Err.      z    P>|z|     x-bar  [    95% C.I.   ]
+---------+--------------------------------------------------------------------
+lpol2dum*|   .0001608    .003462     0.05   0.963   .450472  -.006625  .006946
+pol2du~3 |  -.0086659   .0071421    -1.21   0.225   .006177  -.022664  .005332
+ lanywar*|   .0254823   .0071861     4.75   0.000    .14982   .011398  .039567
+anywar~3 |  -.0073073   .0050627    -1.45   0.146  -.000898   -.01723  .002616
+llnene~c |  -.0024851   .0007802    -3.16   0.002  -.869905  -.004014 -.000956
+  llnpop |   .0042157   .0011795     3.73   0.000   9.10679   .001904  .006527
+    lage |  -.0003332   .0001482    -2.19   0.028   56.6771  -.000624 -.000043
+ ltenure |   -.000101    .000239    -0.42   0.672   8.25629  -.000569  .000367
+---------+--------------------------------------------------------------------
+  obs. P |   .0216757
+ pred. P |   .0180807  (at x-bar)
+------------------------------------------------------------------------------
+(*) dF/dx is for discrete change of dummy variable from 0 to 1
+    z and P>|z| correspond to the test of the underlying coefficient being 0
+
+. testparm *
+
+ ( 1)  lpol2dum = 0
+ ( 2)  pol2duml1l3 = 0
+ ( 3)  lanywar = 0
+ ( 4)  anywarl1l3 = 0
+ ( 5)  llnenergy_pc = 0
+ ( 6)  llnpop = 0
+ ( 7)  lage = 0
+ ( 8)  ltenure = 0
+
+           chi2(  8) =   83.99
+         Prob > chi2 =    0.0000
+
+. outreg2 using "tables/table_9.tex", coefastr se append bd(3) adds("P-val",r(p))
+tables/table_9.tex
+dir : seeout
+
+. 
+. 
+. **************************************
+. *** Table 10: Success vs. failure, institutional change
+. **************************************
+. 
+. 
+. ***
+. * NEW CODE WITH MATCHING PACKAGES
+. *
+. * NEED TO INSTALL IF NECESSARY 
+. ***
+. 
+. *INSTALL PACKAGES
+. *ssc install kmatch
+. *ssc install st0026
+. *ssc install psmatch2
+. 
+. 
+. * Set up propensity score variables
+. for var lpol2dum pol2duml1l3 anywarl1l3 lanywar llnpop llnenergy_pc lage ltenure 
+> : g mis_X = (X == .) \ g nonmis_X = X \ replace nonmis_X  = 0 if X == .
+
+->  g mis_lpol2dum = (lpol2dum == .)
+
+->  g nonmis_lpol2dum = lpol2dum
+(1,170 missing values generated)
+
+->  replace nonmis_lpol2dum = 0 if lpol2dum == .
+(1,170 real changes made)
+
+->  g mis_pol2duml1l3 = (pol2duml1l3 == .)
+
+->  g nonmis_pol2duml1l3 = pol2duml1l3
+(1,578 missing values generated)
+
+->  replace nonmis_pol2duml1l3 = 0 if pol2duml1l3 == .
+(1,578 real changes made)
+
+->  g mis_anywarl1l3 = (anywarl1l3 == .)
+
+->  g nonmis_anywarl1l3 = anywarl1l3
+(1,083 missing values generated)
+
+->  replace nonmis_anywarl1l3 = 0 if anywarl1l3 == .
+(1,083 real changes made)
+
+->  g mis_lanywar = (lanywar == .)
+
+->  g nonmis_lanywar = lanywar
+(670 missing values generated)
+
+->  replace nonmis_lanywar = 0 if lanywar == .
+(670 real changes made)
+
+->  g mis_llnpop = (llnpop == .)
+
+->  g nonmis_llnpop = llnpop
+(1,734 missing values generated)
+
+->  replace nonmis_llnpop = 0 if llnpop == .
+(1,734 real changes made)
+
+->  g mis_llnenergy_pc = (llnenergy_pc == .)
+
+->  g nonmis_llnenergy_pc = llnenergy_pc
+(2,677 missing values generated)
+
+->  replace nonmis_llnenergy_pc = 0 if llnenergy_pc == .
+(2,677 real changes made)
+
+->  g mis_lage = (lage == .)
+
+->  g nonmis_lage = lage
+(322 missing values generated)
+
+->  replace nonmis_lage = 0 if lage == .
+(322 real changes made)
+
+->  g mis_ltenure = (ltenure == .)
+
+->  g nonmis_ltenure = ltenure
+(208 missing values generated)
+
+->  replace nonmis_ltenure = 0 if ltenure == .
+(208 real changes made)
+
+. 
+. pscore seriousattempt nonmis_* mis_* if obsid != "" , pscore(pscoreseriousattempt
+> ) blockid(blockseriousattempt)
+
+
+
+**************************************************** 
+Algorithm to estimate the propensity score 
+**************************************************** 
+
+
+The treatment is seriousattempt
+
+seriousatte |
+        mpt |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |     12,109       98.12       98.12
+          1 |        232        1.88      100.00
+------------+-----------------------------------
+      Total |     12,341      100.00
+
+
+
+Estimation of the propensity score 
+
+Iteration 0:   log likelihood = -1151.7607
+Iteration 1:   log likelihood = -1091.5362
+Iteration 2:   log likelihood =  -1086.845
+Iteration 3:   log likelihood = -1086.7555
+Iteration 4:   log likelihood = -1086.7553
+
+Probit regression                                 Number of obs   =      12341
+                                                  LR chi2(16)     =     130.01
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -1086.7553                       Pseudo R2       =     0.0564
+
+------------------------------------------------------------------------------
+seriousat~pt |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+nonmis_lpo~m |  -.0388397   .0665686    -0.58   0.560    -.1693118    .0916324
+nonmis_pol~3 |  -.2021465   .1333782    -1.52   0.130    -.4635631      .05927
+nonmis_any~3 |  -.1269918    .084638    -1.50   0.134    -.2928794    .0388957
+nonmis_lan~r |   .3975877   .0773247     5.14   0.000     .2460339    .5491414
+nonmis_lln~p |   .0940376    .020087     4.68   0.000     .0546678    .1334074
+nonmis_lln~c |  -.0534321   .0131377    -4.07   0.000    -.0791816   -.0276826
+ nonmis_lage |  -.0066828   .0025532    -2.62   0.009    -.0116869   -.0016786
+nonmis_lte~e |   -.000752   .0036765    -0.20   0.838    -.0079577    .0064538
+mis_lpol2dum |  -.4402454   .3104574    -1.42   0.156    -1.048731    .1682399
+mis_pol2du~3 |   .1532913   .2705258     0.57   0.571    -.3769296    .6835122
+mis_anywar~3 |  -.1791836   .2964267    -0.60   0.546    -.7601693    .4018022
+ mis_lanywar |   .3687176    .368865     1.00   0.318    -.3542444     1.09168
+  mis_llnpop |   .1832028   .2328447     0.79   0.431    -.2731645    .6395701
+mis_llnene~c |   .2470247   .1081477     2.28   0.022     .0350592    .4589902
+    mis_lage |  -.4449453   .4143544    -1.07   0.283    -1.257065    .3671744
+ mis_ltenure |   .1759419   .5580913     0.32   0.753    -.9178969    1.269781
+       _cons |  -2.653166    .218736   -12.13   0.000    -3.081881   -2.224452
+------------------------------------------------------------------------------
+
+
+
+Description of the estimated propensity score 
+
+                 Estimated propensity score
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     .0017555       .0006004
+ 5%     .0031626       .0006134
+10%     .0046963       .0007847       Obs              12,341
+25%     .0089656       .0008049       Sum of Wgt.      12,341
+
+50%     .0147333                      Mean           .0188117
+                        Largest       Std. Dev.      .0157151
+75%     .0231314       .1370727
+90%     .0380847       .1391394       Variance        .000247
+95%     .0496203       .1413994       Skewness       2.336085
+99%     .0805756       .1556114       Kurtosis       11.34538
+
+
+
+****************************************************** 
+Step 1: Identification of the optimal number of blocks 
+Use option detail if you want more detailed output 
+****************************************************** 
+
+
+The final number of blocks is 5
+
+This number of blocks ensures that the mean propensity score
+is not different for treated and controls in each blocks
+
+
+
+********************************************************** 
+Step 2: Test of balancing property of the propensity score 
+Use option detail if you want more detailed output 
+********************************************************** 
+
+
+The balancing property is satisfied 
+
+
+This table shows the inferior bound, the number of treated
+and the number of controls for each block 
+
+  Inferior |
+  of block |    seriousattempt
+of pscore  |         0          1 |     Total
+-----------+----------------------+----------
+         0 |     5,024         23 |     5,047 
+     .0125 |     4,462         95 |     4,557 
+      .025 |     2,050         82 |     2,132 
+       .05 |       524         31 |       555 
+        .1 |        49          1 |        50 
+-----------+----------------------+----------
+     Total |    12,109        232 |    12,341 
+
+
+******************************************* 
+End of the algorithm to estimate the pscore 
+******************************************* 
+
+. 
+. g failurelautoc = failure*lautoc
+(1,170 missing values generated)
+
+. g failureldemoc = failure*ldemoc
+(1,170 missing values generated)
+
+. 
+. ********************************
+. * Table 10A
+. ********************************
+. 
+. ***
+. * COLUMNS (1) - (2)
+. ***
+. 
+. eststo clear
+
+. quietly reg absnpolity2dummy11 success failure  , cluster(cowcode)
+
+. global reg_1s = _b[success]
+
+. global reg_1s_se = _se[success]
+
+. global reg_1f = _b[failure]
+
+. global reg_1f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    5.35
+            Prob > F =    0.0220
+
+. eststo reg1, add(pvalS r(p))
+(e(pvalS) = .02197679 added)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.13
+            Prob > F =    0.7239
+
+. eststo reg1, add(pvalF r(p))
+(e(pvalF) = .72394929 added)
+
+. 
+. 
+. quietly xi: reg absnpolity2dummy11 success failure nonmis_* mis_*  regdum* qtrcen
+> tury*  , cluster(cowcode)
+
+. global reg_2s = _b[success]
+
+. global reg_2s_se = _se[success]
+
+. global reg_2f = _b[failure]
+
+. global reg_2f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    5.95
+            Prob > F =    0.0157
+
+. eststo reg2, add(pvalS r(p))
+(e(pvalS) = .01572027 added)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.10
+            Prob > F =    0.7506
+
+. eststo reg2, add(pvalF r(p))
+(e(pvalF) = .75055337 added)
+
+. 
+. *propensity score matching
+. quietly xi: reg absnpolity2dummy11 success failure nonmis_* mis_*  i.blockserious
+>  regdum* qtrcentury*  , cluster(cowcode)
+
+. global reg_3s = _b[success]
+
+. global reg_3s_se = _se[success]
+
+. global reg_3f = _b[failure]
+
+. global reg_3f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    5.78
+            Prob > F =    0.0173
+
+. eststo reg3, add(pvalS r(p))
+(e(pvalS) = .0173077 added)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.09
+            Prob > F =    0.7615
+
+. eststo reg3, add(pvalF r(p))
+(e(pvalF) = .76153866 added)
+
+. 
+. 
+. estout, stat(pvalS pvalF)
+
+---------------------------------------------------
+                     reg1         reg2         reg3
+                        b            b            b
+---------------------------------------------------
+success          .0978712     .1013593     .0999941
+failure          .0063008     .0053657     .0050712
+nonmis_lpo~m                  .0112023     .0099692
+nonmis_pol~3                 -.0039819    -.0084111
+nonmis_any~3                  .0007092    -.0023741
+nonmis_lan~r                  .0109833     .0201489
+nonmis_lln~p                  .0026466     .0049292
+nonmis_lln~c                 -.0035293    -.0048031
+nonmis_lage                   .0003276     .0001873
+nonmis_lte~e                 -.0006032    -.0006237
+mis_lpol2dum                         0            0
+mis_pol2du~3                  .0366558     .0411892
+mis_anywar~3                 -.0351482    -.0398424
+mis_lanywar                   .0059512      .010174
+mis_llnpop                    .0166443     .0254812
+mis_llnene~c                  .0027448     .0087712
+mis_lage                      .0282489     .0189468
+mis_ltenure                          0            0
+regdumAfrica                  .0441898     .0447477
+regdumAsia                    .0322732     .0336186
+regdumMENA                    .0098707     .0099643
+regdumLatAm                   .0418715     .0425598
+regdumEEur                     .026315     .0265035
+qtrcentury2                    .000599     .0001156
+qtrcentury3                   .0308809     .0310168
+qtrcentury4                   .0180563     .0173309
+qtrcentury5                   .0246677     .0246448
+_Iblockser~2                              -.0084724
+_Iblockser~3                              -.0079218
+_Iblockser~4                              -.0253441
+_Iblockser~5                              -.1042315
+_cons            .0424797    -.0479196    -.0556154
+---------------------------------------------------
+pvalS            .0219768     .0157203     .0173077
+pvalF            .7239493     .7505534     .7615387
+---------------------------------------------------
+
+. 
+. ***
+. * NEW METHODS
+. ***
+. 
+. *nearest neighbor matching
+. attnd absnpolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousatte
+> mpt) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(2 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+       59          56       0.105        0.052      2.011
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd absnpolity2dummy11 success failure nonmis_lpol2dum nonmis_pol2d
+> uml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_
+> lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_l
+> lnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100  .1046366 -.0096765  .0594393  -.0133038    .222577   (N)
+             |                                      -.0245098   .2191496   (P)
+             |                                       .0160727   .2236111  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59          56       0.105       0.059       1.760
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw absnpolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousatt
+> empt) bootstrap reps(100)
+. *save some r-class data
+. global attnd_1s = r(attnd)
+
+. global attnd_1s_bse = r(bseattnd)
+
+. 
+. *nearest neighbor matching
+. attnd absnpolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousatte
+> mpt) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(4 missing values generated)
+(5 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+      173         165      -0.018        0.026     -0.713
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd absnpolity2dummy11 failure success nonmis_lpol2dum nonmis_pol2d
+> uml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_
+> lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_l
+> lnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100 -.0182927  .0007319  .0288258  -.0754894    .038904   (N)
+             |                                       -.074128    .041491   (P)
+             |                                      -.0745169   .0325898  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173         165      -0.018       0.029      -0.635
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw absnpolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousatt
+> empt) bootstrap reps(100)
+. *save some r-class data
+. global attnd_1f = r(attnd)
+
+. global attnd_1f_bse = r(bseattnd)
+
+. 
+. *kernel-density matching 
+. attk absnpolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousattem
+> pt) bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.098           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk absnpolity2dummy11 success failure nonmis_lpol2dum nonmis_pol2du
+> ml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_l
+> age nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_ll
+> npop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth(
+> .06)
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100   .097716  .0060974   .048157   .0021619     .19327   (N)
+             |                                       .0168742   .1910042   (P)
+             |                                        .011507   .1885262  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.098       0.048       2.029
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_1s = r(attk)
+
+. global attk_1s_bse = r(bseattk)
+
+. 
+. *kernel-density matching 
+. attk absnpolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousattem
+> pt) bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168       0.006           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk absnpolity2dummy11 failure success nonmis_lpol2dum nonmis_pol2du
+> ml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_l
+> age nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_ll
+> npop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth(
+> .06)
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100  .0055095  .0023074  .0176537  -.0295194   .0405383   (N)
+             |                                      -.0223628   .0428856   (P)
+             |                                      -.0248397   .0389718  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168       0.006       0.018       0.312
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_1f = r(attk)
+
+. global attk_1f_bse = r(bseattk)
+
+. 
+. *now I generate my matrix and the summary table
+. matrix A = $reg_1s, $reg_2s, $reg_3s, $attnd_1s, $attk_1s\ $reg_1s_se, $reg_2s_se
+> , $reg_3s_se, $attnd_1s_bse, $attk_1s_bse\ $reg_1f, $reg_2f, $reg_3f, $attnd_1f, 
+> $attk_1f\ $reg_1f_se, $reg_2f_se, $reg_3f_se, $attnd_1f_bse, $attk_1f_bse
+
+. matrix rownames A = "Success" "Std_Error" "Failure" "Std_Error"
+
+. matrix colnames A = REG REG_con REG_con_pscore ATT_Neighbor ATT_Kernel 
+
+. matlist A, format(%15.4f) twidth(40) title(Summary of Results)
+
+Summary of Results
+
+                                         |             REG          REG_con 
+-----------------------------------------+----------------------------------
+                                 Success |          0.0979           0.1014 
+                               Std_Error |          0.0423           0.0415 
+                                 Failure |          0.0063           0.0054 
+                               Std_Error |          0.0178           0.0169 
+
+                                         |  REG_con_pscore     ATT_Neighbor 
+-----------------------------------------+----------------------------------
+                                 Success |          0.1000           0.1046 
+                               Std_Error |          0.0416           0.0594 
+                                 Failure |          0.0051          -0.0183 
+                               Std_Error |          0.0167           0.0288 
+
+                                         |      ATT_Kernel 
+-----------------------------------------+-----------------
+                                 Success |          0.0977 
+                               Std_Error |          0.0482 
+                                 Failure |          0.0055 
+                               Std_Error |          0.0177 
+
+. 
+. esttab matrix(A, fmt(3)) using "tables/matrix_table.tex", fragment replace
+(note: file tables/matrix_table.tex not found)
+(output written to tables/matrix_table.tex)
+
+. 
+. 
+. 
+. ***
+. * COLUMNS (3) - (4)
+. ***
+. 
+. reg npolity2dummy11 success failure  , cluster(cowcode)
+
+Linear regression                               Number of obs     =     10,932
+                                                F(2, 170)         =       1.38
+                                                Prob > F          =     0.2555
+                                                R-squared         =     0.0006
+                                                Root MSE          =     .20748
+
+                              (Std. Err. adjusted for 171 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+npolity2d~11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     success |   .0656007   .0471437     1.39   0.166    -.0274617    .1586631
+     failure |  -.0167699   .0193887    -0.86   0.388    -.0550435    .0215038
+       _cons |   .0045747   .0013686     3.34   0.001      .001873    .0072764
+------------------------------------------------------------------------------
+
+. global reg_4s = _b[success]
+
+. global reg_4s_se = _se[success]
+
+. global reg_4f = _b[failure]
+
+. global reg_4f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    1.94
+            Prob > F =    0.1659
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.75
+            Prob > F =    0.3883
+
+. local pvalF = r(p)
+
+. 
+. 
+. xi: reg npolity2dummy11 success failure nonmis_* mis_*  regdum* qtrcentury*  , cl
+> uster(cowcode)
+
+Linear regression                               Number of obs     =     10,932
+                                                F(25, 170)        =       8.11
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0768
+                                                Root MSE          =     .19962
+
+                                  (Std. Err. adjusted for 171 clusters in cowcode)
+----------------------------------------------------------------------------------
+                 |               Robust
+ npolity2dummy11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------+----------------------------------------------------------------
+         success |   .0597167    .044442     1.34   0.181    -.0280125    .1474459
+         failure |  -.0192466   .0194316    -0.99   0.323     -.057605    .0191118
+ nonmis_lpol2dum |    -.12048   .0106064   -11.36   0.000    -.1414172   -.0995428
+nonmis_pol2dum~3 |  -.0733033   .0209965    -3.49   0.001    -.1147508   -.0318558
+nonmis_anywarl~3 |   .0125314   .0104847     1.20   0.234    -.0081656    .0332283
+  nonmis_lanywar |   -.007943   .0081535    -0.97   0.331    -.0240382    .0081522
+   nonmis_llnpop |   .0023801   .0020204     1.18   0.240    -.0016083    .0063684
+nonmis_llnener~c |   .0015911   .0016187     0.98   0.327    -.0016042    .0047864
+     nonmis_lage |   .0004835   .0002517     1.92   0.056    -.0000134    .0009803
+  nonmis_ltenure |  -.0007836   .0003937    -1.99   0.048    -.0015608   -6.53e-06
+    mis_lpol2dum |          0  (omitted)
+ mis_pol2duml1l3 |   .0291068   .0392933     0.74   0.460    -.0484589    .1066725
+  mis_anywarl1l3 |   -.039102   .0394914    -0.99   0.324    -.1170586    .0388546
+     mis_lanywar |   .0170133   .0345377     0.49   0.623    -.0511646    .0851913
+      mis_llnpop |   .0472641   .0197763     2.39   0.018     .0082254    .0863028
+mis_llnenergy_pc |  -.0101264   .0130399    -0.78   0.438    -.0358675    .0156147
+        mis_lage |  -.0290338    .035258    -0.82   0.411    -.0986337     .040566
+     mis_ltenure |          0  (omitted)
+    regdumAfrica |  -.0751999   .0157429    -4.78   0.000    -.1062768   -.0441231
+      regdumAsia |  -.0587858   .0121731    -4.83   0.000    -.0828157   -.0347558
+      regdumMENA |  -.0840634   .0134965    -6.23   0.000    -.1107058    -.057421
+     regdumLatAm |  -.0332281   .0087379    -3.80   0.000    -.0504769   -.0159794
+      regdumEEur |  -.0687724    .009391    -7.32   0.000    -.0873103   -.0502344
+     qtrcentury2 |   .0061138   .0099252     0.62   0.539    -.0134787    .0257064
+     qtrcentury3 |  -.0096837   .0115867    -0.84   0.404    -.0325562    .0131887
+     qtrcentury4 |   -.007357   .0108584    -0.68   0.499    -.0287917    .0140778
+     qtrcentury5 |   .0406856   .0116072     3.51   0.001     .0177727    .0635984
+           _cons |   .0507027   .0260066     1.95   0.053    -.0006348    .1020402
+----------------------------------------------------------------------------------
+
+. global reg_5s = _b[success]
+
+. global reg_5s_se = _se[success]
+
+. global reg_5f = _b[failure]
+
+. global reg_5f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    1.81
+            Prob > F =    0.1808
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.98
+            Prob > F =    0.3233
+
+. local pvalF = r(p)
+
+. 
+. *propensity score matching
+. xi: reg npolity2dummy11 success failure nonmis_* mis_*  i.blockserious regdum* qt
+> rcentury*  , cluster(cowcode)
+i.blockseriou~t   _Iblockseri_1-5     (naturally coded; _Iblockseri_1 omitted)
+
+Linear regression                               Number of obs     =     10,932
+                                                F(29, 170)        =       7.25
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0770
+                                                Root MSE          =     .19965
+
+                                  (Std. Err. adjusted for 171 clusters in cowcode)
+----------------------------------------------------------------------------------
+                 |               Robust
+ npolity2dummy11 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------+----------------------------------------------------------------
+         success |   .0592815    .044316     1.34   0.183    -.0281992    .1467621
+         failure |   -.019221   .0194736    -0.99   0.325    -.0576622    .0192203
+ nonmis_lpol2dum |   -.121176   .0105972   -11.43   0.000    -.1420951    -.100257
+nonmis_pol2dum~3 |  -.0765272   .0218489    -3.50   0.001    -.1196573    -.033397
+nonmis_anywarl~3 |   .0102346   .0115877     0.88   0.378    -.0126397    .0331089
+  nonmis_lanywar |  -.0009132   .0148651    -0.06   0.951    -.0302571    .0284307
+   nonmis_llnpop |   .0039318   .0030954     1.27   0.206    -.0021786    .0100422
+nonmis_llnener~c |   .0006806   .0021276     0.32   0.749    -.0035193    .0048805
+     nonmis_lage |   .0003841   .0002856     1.34   0.180    -.0001796    .0009478
+  nonmis_ltenure |  -.0007995   .0003937    -2.03   0.044    -.0015767   -.0000223
+    mis_lpol2dum |          0  (omitted)
+ mis_pol2duml1l3 |    .031889   .0394645     0.81   0.420    -.0460146    .1097926
+  mis_anywarl1l3 |  -.0419591    .039376    -1.07   0.288     -.119688    .0357699
+     mis_lanywar |    .019838   .0345964     0.57   0.567    -.0484559     .088132
+      mis_llnpop |   .0529553   .0204927     2.58   0.011     .0125024    .0934083
+mis_llnenergy_pc |  -.0058785   .0156728    -0.38   0.708    -.0368168    .0250598
+        mis_lage |  -.0356725   .0359158    -0.99   0.322    -.1065708    .0352258
+     mis_ltenure |          0  (omitted)
+   _Iblockseri_2 |  -.0049106   .0090387    -0.54   0.588    -.0227531    .0129319
+   _Iblockseri_3 |  -.0091698   .0165969    -0.55   0.581    -.0419324    .0235928
+   _Iblockseri_4 |  -.0153435   .0256737    -0.60   0.551    -.0660237    .0353368
+   _Iblockseri_5 |   -.046386   .0350423    -1.32   0.187    -.1155601    .0227881
+    regdumAfrica |  -.0748697   .0157643    -4.75   0.000    -.1059887   -.0437507
+      regdumAsia |  -.0581045   .0121266    -4.79   0.000    -.0820425   -.0341665
+      regdumMENA |   -.083636   .0133855    -6.25   0.000    -.1100591   -.0572129
+     regdumLatAm |  -.0329801   .0089243    -3.70   0.000    -.0505968   -.0153634
+      regdumEEur |  -.0686291   .0093835    -7.31   0.000    -.0871524   -.0501058
+     qtrcentury2 |   .0060124   .0099449     0.60   0.546     -.013619    .0256439
+     qtrcentury3 |   -.009607   .0115821    -0.83   0.408    -.0324703    .0132564
+     qtrcentury4 |  -.0074903   .0108686    -0.69   0.492    -.0289452    .0139646
+     qtrcentury5 |   .0407422   .0115919     3.51   0.001     .0178596    .0636247
+           _cons |   .0455885   .0271355     1.68   0.095    -.0079774    .0991543
+----------------------------------------------------------------------------------
+
+. global reg_6s = _b[success]
+
+. global reg_6s_se = _se[success]
+
+. global reg_6f = _b[failure]
+
+. global reg_6f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   170) =    1.79
+            Prob > F =    0.1828
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   170) =    0.97
+            Prob > F =    0.3250
+
+. local pvalF = r(p)
+
+. 
+. 
+. ***
+. * NEW METHODS
+. ***
+. 
+. *nearest neighbor matching
+. attnd npolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousattempt
+> ) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(2 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+       59          56       0.070        0.055      1.284
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd npolity2dummy11 success failure nonmis_lpol2dum nonmis_pol2duml
+> 1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_lag
+> e nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_llnp
+> op mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100  .0701754  .0008148  .0508662  -.0307542   .1711051   (N)
+             |                                        -.03125   .1792663   (P)
+             |                                          -.025   .2015873  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59          56       0.070       0.051       1.380
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw npolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousattemp
+> t) bootstrap reps(100)
+. *save some r-class data
+. global attnd_2s = r(attnd)
+
+. global attnd_2s_bse = r(bseattnd)
+
+. 
+. *nearest neighbor matching
+. attnd npolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousattempt
+> ) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(4 missing values generated)
+(5 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+      173         165      -0.006        0.026     -0.231
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd npolity2dummy11 failure success nonmis_lpol2dum nonmis_pol2duml
+> 1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_lag
+> e nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_llnp
+> op mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100 -.0060976  .0049753  .0316349   -.068868   .0566729   (N)
+             |                                      -.0697844   .0646552   (P)
+             |                                      -.1073874   .0398026  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173         165      -0.006       0.032      -0.193
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw npolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousattemp
+> t) bootstrap reps(100)
+. *save some r-class data
+. global attnd_2f = r(attnd)
+
+. global attnd_2f_bse = r(bseattnd)
+
+. 
+. *kernel-density matching 
+. attk npolity2dummy11 success failure nonmis_* mis_*, pscore(pscoreseriousattempt)
+>  bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.066           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk npolity2dummy11 success failure nonmis_lpol2dum nonmis_pol2duml1
+> l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_lage
+>  nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_llnpo
+> p mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth(.06
+> )
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100  .0659623  -.002034  .0513786  -.0359839   .1679085   (N)
+             |                                      -.0465235   .1695456   (P)
+             |                                      -.0465235   .1695456  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.066       0.051       1.284
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_2s = r(attk)
+
+. global attk_2s_bse = r(bseattk)
+
+. 
+. *kernel-density matching 
+. attk npolity2dummy11 failure success nonmis_* mis_*, pscore(pscoreseriousattempt)
+>  bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168      -0.017           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk npolity2dummy11 failure success nonmis_lpol2dum nonmis_pol2duml1
+> l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_lage
+>  nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_llnpo
+> p mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth(.06
+> )
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100 -.0171883 -.0014421  .0171547  -.0512269   .0168502   (N)
+             |                                      -.0532166   .0251703   (P)
+             |                                      -.0467038   .0314952  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168      -0.017       0.017      -1.002
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_2f = r(attk)
+
+. global attk_2f_bse = r(bseattk)
+
+. 
+. *now I generate my matrix and the summary table
+. matrix B = $reg_4s, $reg_5s, $reg_6s, $attnd_2s, $attk_2s\ $reg_4s_se, $reg_5s_se
+> , $reg_6s_se, $attnd_2s_bse, $attk_2s_bse\ $reg_4f, $reg_5f, $reg_6f, $attnd_2f, 
+> $attk_2f\ $reg_4f_se, $reg_5f_se, $reg_6f_se, $attnd_2f_bse, $attk_2f_bse
+
+. matrix rownames B = "Success" "Std_Error" "Failure" "Std_Error"
+
+. matrix colnames B = REG REG_con REG_con_pscore ATT_Neighbor ATT_Kernel 
+
+. matlist B, format(%15.4f) twidth(40) title(Summary of Results)
+
+Summary of Results
+
+                                         |             REG          REG_con 
+-----------------------------------------+----------------------------------
+                                 Success |          0.0656           0.0597 
+                               Std_Error |          0.0471           0.0444 
+                                 Failure |         -0.0168          -0.0192 
+                               Std_Error |          0.0194           0.0194 
+
+                                         |  REG_con_pscore     ATT_Neighbor 
+-----------------------------------------+----------------------------------
+                                 Success |          0.0593           0.0702 
+                               Std_Error |          0.0443           0.0509 
+                                 Failure |         -0.0192          -0.0061 
+                               Std_Error |          0.0195           0.0316 
+
+                                         |      ATT_Kernel 
+-----------------------------------------+-----------------
+                                 Success |          0.0660 
+                               Std_Error |          0.0514 
+                                 Failure |         -0.0172 
+                               Std_Error |          0.0172 
+
+. 
+. esttab matrix(B, fmt(3)) using tables/matrix_table.tex, fragment append
+(output written to tables/matrix_table.tex)
+
+. 
+. 
+. 
+. ***
+. * COLUMNS (5) - (6)
+. ***
+. 
+. 
+. reg perexitregularNC201 success failure  , cluster(cowcode)
+
+Linear regression                               Number of obs     =      5,979
+                                                F(2, 144)         =       3.43
+                                                Prob > F          =     0.0351
+                                                R-squared         =     0.0010
+                                                Root MSE          =     .33799
+
+                              (Std. Err. adjusted for 145 clusters in cowcode)
+------------------------------------------------------------------------------
+             |               Robust
+perexitreg.. |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     success |   .0713242   .0402376     1.77   0.078    -.0082084    .1508569
+     failure |  -.0713396   .0409636    -1.74   0.084    -.1523073     .009628
+       _cons |   .7359236   .0245693    29.95   0.000     .6873605    .7844867
+------------------------------------------------------------------------------
+
+. global reg_7s = _b[success]
+
+. global reg_7s_se = _se[success]
+
+. global reg_7f = _b[failure]
+
+. global reg_7f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   144) =    3.14
+            Prob > F =    0.0784
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   144) =    3.03
+            Prob > F =    0.0837
+
+. local pvalF = r(p)
+
+. 
+. 
+. xi: reg perexitregularNC201 success failure nonmis_* mis_*  regdum* qtrcentury*  
+> , cluster(cowcode)
+
+Linear regression                               Number of obs     =      5,979
+                                                F(27, 144)        =      19.51
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.3592
+                                                Root MSE          =     .27126
+
+                                  (Std. Err. adjusted for 145 clusters in cowcode)
+----------------------------------------------------------------------------------
+                 |               Robust
+perexitregu~C201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------+----------------------------------------------------------------
+         success |   .1149701   .0427156     2.69   0.008     .0305395    .1994007
+         failure |   -.039264    .024378    -1.61   0.109     -.087449     .008921
+ nonmis_lpol2dum |   .0954959   .0374492     2.55   0.012     .0214748     .169517
+nonmis_pol2dum~3 |  -.0212659   .0203208    -1.05   0.297    -.0614316    .0188997
+nonmis_anywarl~3 |  -.0276312   .0136267    -2.03   0.044    -.0545654   -.0006969
+  nonmis_lanywar |   .0198274   .0256415     0.77   0.441    -.0308549    .0705097
+   nonmis_llnpop |  -.0119269   .0113841    -1.05   0.297    -.0344284    .0105745
+nonmis_llnener~c |   .0370911    .009853     3.76   0.000     .0176158    .0565663
+     nonmis_lage |   .0024855   .0011529     2.16   0.033     .0002066    .0047644
+  nonmis_ltenure |  -.0003944   .0020308    -0.19   0.846    -.0044085    .0036197
+    mis_lpol2dum |   .0371869   .0574387     0.65   0.518    -.0763449    .1507188
+ mis_pol2duml1l3 |   .0802461   .0465149     1.73   0.087    -.0116941    .1721863
+  mis_anywarl1l3 |  -.0372859   .0442481    -0.84   0.401    -.1247457    .0501738
+     mis_lanywar |   .0171686    .115115     0.15   0.882    -.2103649    .2447021
+      mis_llnpop |   .0809943   .1096879     0.74   0.461     -.135812    .2978005
+mis_llnenergy_pc |   -.233055   .0568967    -4.10   0.000    -.3455156   -.1205945
+        mis_lage |   .0913001   .1102984     0.83   0.409     -.126713    .3093131
+     mis_ltenure |  -.0427678   .1474329    -0.29   0.772      -.33418    .2486443
+    regdumAfrica |  -.3445687   .0877558    -3.93   0.000    -.5180246   -.1711129
+      regdumAsia |  -.1196013   .0622372    -1.92   0.057    -.2426178    .0034152
+      regdumMENA |  -.2301393   .0669665    -3.44   0.001    -.3625037    -.097775
+     regdumLatAm |  -.0996672    .038797    -2.57   0.011    -.1763524    -.022982
+      regdumEEur |  -.2570015   .0608124    -4.23   0.000    -.3772018   -.1368011
+     qtrcentury2 |   .0145312   .0363022     0.40   0.690    -.0572229    .0862854
+     qtrcentury3 |  -.0074962   .0419751    -0.18   0.859    -.0904632    .0754708
+     qtrcentury4 |  -.0339932   .0412278    -0.82   0.411     -.115483    .0474966
+     qtrcentury5 |   .0641336   .0439125     1.46   0.146    -.0226628      .15093
+           _cons |   .8297947   .1215346     6.83   0.000     .5895724    1.070017
+----------------------------------------------------------------------------------
+
+. global reg_8s = _b[success]
+
+. global reg_8s_se = _se[success]
+
+. global reg_8f = _b[failure]
+
+. global reg_8f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   144) =    7.24
+            Prob > F =    0.0080
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   144) =    2.59
+            Prob > F =    0.1095
+
+. local pvalF = r(p)
+
+. 
+. 
+. *propensity score matching
+. xi: reg perexitregularNC201 success failure nonmis_* mis_*  i.blockserious regdum
+> * qtrcentury*  , cluster(cowcode)
+i.blockseriou~t   _Iblockseri_1-5     (naturally coded; _Iblockseri_1 omitted)
+
+Linear regression                               Number of obs     =      5,979
+                                                F(31, 144)        =      81.27
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.3610
+                                                Root MSE          =     .27097
+
+                                  (Std. Err. adjusted for 145 clusters in cowcode)
+----------------------------------------------------------------------------------
+                 |               Robust
+perexitregu~C201 |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------+----------------------------------------------------------------
+         success |   .1116072   .0418721     2.67   0.009     .0288439    .1943705
+         failure |  -.0404856   .0242394    -1.67   0.097    -.0883965    .0074254
+ nonmis_lpol2dum |   .1000553   .0375038     2.67   0.009     .0259263    .1741844
+nonmis_pol2dum~3 |  -.0109309   .0272407    -0.40   0.689    -.0647743    .0429125
+nonmis_anywarl~3 |  -.0206579   .0180472    -1.14   0.254    -.0563295    .0150136
+  nonmis_lanywar |   .0058384   .0447853     0.13   0.896    -.0826831    .0943599
+   nonmis_llnpop |  -.0177856   .0152896    -1.16   0.247    -.0480066    .0124355
+nonmis_llnener~c |   .0400823   .0115075     3.48   0.001     .0173369    .0628278
+     nonmis_lage |   .0028487    .001298     2.19   0.030     .0002832    .0054142
+  nonmis_ltenure |  -.0002595   .0020522    -0.13   0.900    -.0043157    .0037967
+    mis_lpol2dum |   .0487875   .0561253     0.87   0.386    -.0621484    .1597234
+ mis_pol2duml1l3 |    .072872   .0495032     1.47   0.143    -.0249748    .1707188
+  mis_anywarl1l3 |  -.0299654   .0461134    -0.65   0.517     -.121112    .0611813
+     mis_lanywar |   .0099393   .1149128     0.09   0.931    -.2171946    .2370731
+      mis_llnpop |   .0714949   .1159987     0.62   0.539    -.1577852    .3007749
+mis_llnenergy_pc |  -.2533233   .0618703    -4.09   0.000    -.3756147   -.1310319
+        mis_lage |    .116518   .1164723     1.00   0.319    -.1136982    .3467343
+     mis_ltenure |  -.0497296    .147094    -0.34   0.736    -.3404719    .2410127
+   _Iblockseri_2 |   .0404999   .0283213     1.43   0.155    -.0154793    .0964792
+   _Iblockseri_3 |   .0354246   .0519279     0.68   0.496    -.0672148     .138064
+   _Iblockseri_4 |   .0662914   .0801744     0.83   0.410    -.0921793     .224762
+   _Iblockseri_5 |  -.0898215   .1205512    -0.75   0.457       -.3281    .1484569
+    regdumAfrica |   -.344715   .0874268    -3.94   0.000    -.5175206   -.1719094
+      regdumAsia |   -.113568   .0611647    -1.86   0.065    -.2344646    .0073287
+      regdumMENA |  -.2323469   .0664501    -3.50   0.001    -.3636906   -.1010033
+     regdumLatAm |  -.1034026   .0390724    -2.65   0.009    -.1806322   -.0261731
+      regdumEEur |   -.256351   .0606555    -4.23   0.000    -.3762412   -.1364608
+     qtrcentury2 |   .0149627   .0363406     0.41   0.681    -.0568673    .0867926
+     qtrcentury3 |  -.0077262   .0417901    -0.18   0.854    -.0903273     .074875
+     qtrcentury4 |  -.0341636   .0409991    -0.83   0.406    -.1152014    .0468743
+     qtrcentury5 |   .0639118   .0438267     1.46   0.147    -.0227149    .1505384
+           _cons |   .8370828    .128437     6.52   0.000     .5832174    1.090948
+----------------------------------------------------------------------------------
+
+. global reg_9s = _b[success]
+
+. global reg_9s_se = _se[success]
+
+. global reg_9f = _b[failure]
+
+. global reg_9f_se = _se[failure]
+
+. 
+. testparm success
+
+ ( 1)  success = 0
+
+       F(  1,   144) =    7.10
+            Prob > F =    0.0086
+
+. local pvalS = r(p)
+
+. testparm failure
+
+ ( 1)  failure = 0
+
+       F(  1,   144) =    2.79
+            Prob > F =    0.0970
+
+. local pvalF = r(p)
+
+. 
+. 
+. 
+. ***
+. * NEW METHODS
+. ***
+. 
+. *nearest neighbor matching
+. attnd perexitregularNC201 success failure nonmis_* mis_*, pscore(pscoreseriousatt
+> empt) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(16 missing values generated)
+(16 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+       59         126       0.222        0.074      3.010
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd perexitregularNC201 success failure nonmis_lpol2dum nonmis_pol2
+> duml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis
+> _lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_
+> llnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100  .2221088 -.0360183  .0929404   .0376949   .4065226   (N)
+             |                                        .026993   .3829418   (P)
+             |                                       .0878232   .4509133  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59         126       0.222       0.093       2.390
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw perexitregularNC201 success failure nonmis_* mis_*, pscore(pscoreseriousat
+> tempt) bootstrap reps(100)
+. *save some r-class data
+. global attnd_3s = r(attnd)
+
+. global attnd_3s_bse = r(bseattnd)
+
+. 
+. *nearest neighbor matching
+. attnd perexitregularNC201 failure success nonmis_* mis_*, pscore(pscoreseriousatt
+> empt) bootstrap reps(100)
+
+
+ The program is searching the nearest neighbor of each treated unit. 
+ This operation may take a while.
+(36 missing values generated)
+(38 missing values generated)
+
+
+
+ATT estimation with Nearest Neighbor Matching method 
+(random draw version)
+Analytical standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT    Std. Err.          t
+---------------------------------------------------------
+
+      173          97       0.026        0.046      0.564
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attnd perexitregularNC201 failure success nonmis_lpol2dum nonmis_pol2
+> duml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis
+> _lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_
+> llnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt)
+statistic:    attnd      = r(attnd)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       attnd |   100  .0257405 -.0294973  .0619822  -.0972456   .1487266   (N)
+             |                                      -.1371389    .118956   (P)
+             |                                      -.0648919   .1535798  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with Nearest Neighbor Matching method
+(random draw version)
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173          97       0.026       0.062       0.415
+
+---------------------------------------------------------
+Note: the numbers of treated and controls refer to actual
+nearest neighbour matches
+
+. *attnw perexitregularNC201 failure success nonmis_* mis_*, pscore(pscoreseriousat
+> tempt) bootstrap reps(100)
+. *save some r-class data
+. global attnd_3f = r(attnd)
+
+. global attnd_3f_bse = r(bseattnd)
+
+. 
+. *kernel-density matching 
+. attk perexitregularNC201 success failure nonmis_* mis_*, pscore(pscoreseriousatte
+> mpt) bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.072           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk perexitregularNC201 success failure nonmis_lpol2dum nonmis_pol2d
+> uml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_
+> lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_l
+> lnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth
+> (.06)
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100  .0719706 -.0022776  .0425112  -.0123808   .1563219   (N)
+             |                                      -.0271908   .1531982   (P)
+             |                                      -.0271908   .1531982  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+       59       12282       0.072       0.043       1.693
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_3s = r(attk)
+
+. global attk_3s_bse = r(bseattk)
+
+. 
+. *kernel-density matching 
+. attk perexitregularNC201 failure success nonmis_* mis_*, pscore(pscoreseriousatte
+> mpt) bootstrap reps(100)
+
+
+ The program is searching for matches of each treated unit. 
+ This operation may take a while.
+
+
+
+ATT estimation with the Kernel Matching method 
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168      -0.071           .           .
+
+---------------------------------------------------------
+Note: Analytical standard errors cannot be computed. Use
+the bootstrap option to get bootstrapped standard errors.
+
+
+
+
+
+Bootstrapping of standard errors 
+
+command:      attk perexitregularNC201 failure success nonmis_lpol2dum nonmis_pol2d
+> uml1l3 nonmis_anywarl1l3 nonmis_lanywar nonmis_llnpop nonmis_llnenergy_pc nonmis_
+> lage nonmis_ltenure mis_lpol2dum mis_pol2duml1l3 mis_anywarl1l3 mis_lanywar mis_l
+> lnpop mis_llnenergy_pc mis_lage mis_ltenure , pscore(pscoreseriousattempt) bwidth
+> (.06)
+statistic:    attk       = r(attk)
+note: label truncated to 80 characters
+
+Bootstrap statistics                              Number of obs    =     12341
+                                                  Replications     =       100
+
+------------------------------------------------------------------------------
+Variable     |  Reps  Observed      Bias  Std. Err. [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        attk |   100 -.0708359  .0054544  .0393129  -.1488412   .0071694   (N)
+             |                                      -.1478386   .0130418   (P)
+             |                                      -.1525574    -.00591  (BC)
+------------------------------------------------------------------------------
+Note:  N   = normal
+       P   = percentile
+       BC  = bias-corrected
+
+
+
+ATT estimation with the Kernel Matching method
+Bootstrapped standard errors
+
+---------------------------------------------------------
+n. treat.   n. contr.         ATT   Std. Err.           t
+---------------------------------------------------------
+
+      173       12168      -0.071       0.039      -1.802
+
+---------------------------------------------------------
+
+. *save some r-class data
+. global attk_3f = r(attk)
+
+. global attk_3f_bse = r(bseattk)
+
+. 
+. *now I generate my matrix and the summary table
+. matrix C = $reg_7s, $reg_8s, $reg_9s, $attnd_3s, $attk_3s\ $reg_7s_se, $reg_8s_se
+> , $reg_9s_se, $attnd_3s_bse, $attk_3s_bse\ $reg_7f, $reg_8f, $reg_9f, $attnd_3f, 
+> $attk_3f\ $reg_7f_se, $reg_8f_se, $reg_9f_se, $attnd_3f_bse, $attk_3f_bse
+
+. matrix rownames C = "Success" "Std_Error" "Failure" "Std_Error"
+
+. matrix colnames C = REG REG_con REG_con_pscore ATT_Neighbor ATT_Kernel 
+
+. matlist C, format(%15.4f) twidth(40) title(Summary of Results)
+
+Summary of Results
+
+                                         |             REG          REG_con 
+-----------------------------------------+----------------------------------
+                                 Success |          0.0713           0.1150 
+                               Std_Error |          0.0402           0.0427 
+                                 Failure |         -0.0713          -0.0393 
+                               Std_Error |          0.0410           0.0244 
+
+                                         |  REG_con_pscore     ATT_Neighbor 
+-----------------------------------------+----------------------------------
+                                 Success |          0.1116           0.2221 
+                               Std_Error |          0.0419           0.0929 
+                                 Failure |         -0.0405           0.0257 
+                               Std_Error |          0.0242           0.0620 
+
+                                         |      ATT_Kernel 
+-----------------------------------------+-----------------
+                                 Success |          0.0720 
+                               Std_Error |          0.0425 
+                                 Failure |         -0.0708 
+                               Std_Error |          0.0393 
+
+. 
+. esttab matrix(C, fmt(3)) using "tables/matrix_table.tex", fragment append
+(output written to tables/matrix_table.tex)
+
+. 
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. **************
+. * END
+. **************
+. 
+end of do-file
+
 . 
 end of do-file
