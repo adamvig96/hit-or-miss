@@ -2,7 +2,7 @@
 
 Authors: Niccolò Borri, Philipp Hilmbauer, Ramzi Chariag, Marton Vegh, Adam Vig
 
-The repository contains the paper, code and data for our replication exercise for the Empirical Political Economy class at CEU 2022 Winter
+The repository contains the paper, code and data for our replication exercise to the Empirical Political Economy class at CEU 2022 Winter.
 
 ### Abstract
 
