@@ -1,6 +1,6 @@
 # Replication Exercise: Hit or Miss? The Effect of Assassinations on Institutions and War
 
-Authors: Niccoló Borri, Philipp Hilmbauer, Ramzi Chariag, Marton Vegh, Adam Vig
+Authors: Niccolò Borri, Philipp Hilmbauer, Ramzi Chariag, Marton Vegh, Adam Vig
 
 The repository contains code and data to replicate our project to the Empirical Political Economy class at CEU 2022 Winter.
 
@@ -18,7 +18,8 @@ when adding the dynamic component to the analysis
 ### Instructions for replicators
 
 1. The replicator should set the working directory in `master.do` to the project folder.
-2. Run `stata -b do master.do` from the terminal.
+2. Run `stata -b do master.do` from the terminal and all tables should be replicated.
+3. To display event study figures, run `code/eventstudy.do` in Stata.
 
 ### References
 
